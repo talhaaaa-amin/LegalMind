@@ -16,6 +16,10 @@ export interface WorkspaceData {
   documents: CaseDocument[];
   responses: QuestionResponse[];
   savedAnswers: SavedAnswer[];
+  pageContents: Record<string, Record<string, {
+    sectionTitle: string;
+    content: string;
+  }>>;
 }
 
 const seedData: WorkspaceData = {
@@ -172,6 +176,54 @@ const seedData: WorkspaceData = {
     },
   ],
   savedAnswers: [],
+  pageContents: {
+    'document-1': {
+      '40': {
+        sectionTitle: 'Article 7 · Delays and Extensions',
+        content: 'The Contractor shall exercise all reasonable diligence to maintain the Progress Schedule and shall promptly notify the Owner of any circumstance that may affect the scheduled completion date.',
+      },
+      '41': {
+        sectionTitle: 'Article 7 · Delays and Extensions',
+        content: 'Notice under this Article shall include the cause of the delay, the estimated duration, and the measures being taken to mitigate its effect on the Work.',
+      },
+      '42': {
+        sectionTitle: 'Article 7 · Delays and Extensions',
+        content: 'The Contractor shall notify the Owner in writing within five (5) Business Days after becoming aware of any event likely to cause delay. Failure to provide timely notice shall waive any claim for an extension of time to the extent the Owner is prejudiced.',
+      },
+      '43': {
+        sectionTitle: 'Article 7 · Delays and Extensions',
+        content: 'Upon receipt of a proper notice, the parties shall meet promptly to review the anticipated impact and agree on reasonable mitigation measures.',
+      },
+    },
+    'document-3': {
+      '17': {
+        sectionTitle: 'Section 12 · Restrictive Covenants',
+        content: 'The Executive acknowledges that the Company has legitimate interests in protecting its confidential information, customer relationships, and workforce.',
+      },
+      '18': {
+        sectionTitle: 'Section 12 · Restrictive Covenants',
+        content: 'For a period of twelve (12) months following termination, Executive shall not solicit or induce any customer, prospective customer, or employee of the Company with whom Executive had material contact during the final year of employment.',
+      },
+      '19': {
+        sectionTitle: 'Section 12 · Restrictive Covenants',
+        content: 'The restrictions in this Section shall be interpreted to protect the Company interests without preventing the Executive from pursuing lawful employment.',
+      },
+    },
+    'document-4': {
+      '54': {
+        sectionTitle: 'Article IX · Survival',
+        content: 'The representations and warranties of the parties are made as of the date of this Agreement and as of the Closing Date, unless expressly stated otherwise.',
+      },
+      '55': {
+        sectionTitle: 'Article IX · Survival',
+        content: 'The representations and warranties set forth in Sections 4.1 and 4.2 shall survive until the expiration of the applicable statute of limitations. All other representations and warranties shall survive for eighteen (18) months following the Closing Date.',
+      },
+      '56': {
+        sectionTitle: 'Article IX · Survival',
+        content: 'The covenants and agreements of the parties shall survive the Closing in accordance with their respective terms.',
+      },
+    },
+  },
 };
 
 const clone = <T,>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
@@ -198,6 +250,7 @@ function readWorkspace(): WorkspaceData {
       documents: mergeById(workspace.documents, seedData.documents),
       responses: mergeById(workspace.responses, seedData.responses),
       savedAnswers: workspace.savedAnswers ?? [],
+      pageContents: workspace.pageContents ?? seedData.pageContents,
     };
     writeWorkspace(migratedWorkspace);
     return migratedWorkspace;
@@ -368,8 +421,122 @@ export const apiClient = {
     const lawyer = requireAuthenticatedLawyer(workspace);
     if (!lawyer) return [];
     return workspace.documents.filter(
-      (item) => item.ownerId === lawyer.id && (!caseId || item.caseId === caseId),
+      (item) => item.ownerId === lawyer.id && !item.deletedAt && (!caseId || item.caseId === caseId),
     );
+  },
+
+  async getDocumentPageContent(documentId: string, pageNumber: number): Promise<{
+    document: CaseDocument;
+    pageNumber: number;
+    totalPages: number;
+    sectionTitle: string;
+    content: string;
+  }> {
+    await wait();
+    const workspace = readWorkspace();
+    const lawyer = requireAuthenticatedLawyer(workspace);
+    const document = workspace.documents.find(
+      (item) => item.id === documentId && item.ownerId === lawyer?.id,
+    );
+    if (!document || document.deletedAt) {
+      throw new Error('Document is inaccessible or has been deleted.');
+    }
+    if (!Number.isInteger(pageNumber) || pageNumber < 1 || pageNumber > document.pageCount) {
+      throw new Error(`Page must be between 1 and ${document.pageCount}.`);
+    }
+    const page = workspace.pageContents[documentId]?.[String(pageNumber)];
+    return {
+      document: clone(document),
+      pageNumber,
+      totalPages: document.pageCount,
+      sectionTitle: page?.sectionTitle ?? 'Document text',
+      content: page?.content ?? `Page ${pageNumber} of ${document.originalName}. This page is available for document review.`,
+    };
+  },
+
+  async uploadDocument(
+    caseId: string,
+    file: { name: string; size: number; type: string; simulateFailure?: boolean },
+  ): Promise<CaseDocument> {
+    await wait();
+    const workspace = readWorkspace();
+    const { caseItem } = requireCaseOwner(workspace, caseId);
+    if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
+      throw new Error('Only PDF files with application/pdf type or a .pdf extension are supported.');
+    }
+    if (file.size > 20 * 1024 * 1024) {
+      throw new Error('PDF files must be 20 MB or smaller.');
+    }
+    const document: CaseDocument = {
+      id: `document-${Date.now()}`,
+      caseId: caseItem.id,
+      ownerId: caseItem.ownerId,
+      originalName: file.name,
+      pageCount: 15 + Math.floor(Math.random() * 31),
+      activeVersion: 1,
+      status: 'queued',
+      createdAt: new Date().toISOString(),
+    };
+    workspace.documents.push(document);
+    writeWorkspace(workspace);
+    return clone(document);
+  },
+
+  async updateDocumentStatus(
+    documentId: string,
+    status: CaseDocument['status'],
+    errorCode?: string,
+  ): Promise<CaseDocument> {
+    await wait(60);
+    const workspace = readWorkspace();
+    const lawyer = requireAuthenticatedLawyer(workspace);
+    const document = workspace.documents.find((item) => item.id === documentId && item.ownerId === lawyer?.id);
+    if (!document || document.deletedAt) {
+      throw new Error('Document is inaccessible or has been deleted.');
+    }
+    document.status = status;
+    document.errorCode = errorCode;
+    writeWorkspace(workspace);
+    return clone(document);
+  },
+
+  async retryDocumentJob(documentId: string): Promise<CaseDocument> {
+    await wait();
+    const workspace = readWorkspace();
+    const lawyer = requireAuthenticatedLawyer(workspace);
+    const document = workspace.documents.find((item) => item.id === documentId && item.ownerId === lawyer?.id);
+    if (!document || document.deletedAt || document.status !== 'failed') {
+      throw new Error('Only an accessible failed document can be retried.');
+    }
+    document.status = 'queued';
+    delete document.errorCode;
+    writeWorkspace(workspace);
+    return clone(document);
+  },
+
+  async deleteDocument(documentId: string): Promise<void> {
+    await wait();
+    const workspace = readWorkspace();
+    const lawyer = requireAuthenticatedLawyer(workspace);
+    const document = workspace.documents.find((item) => item.id === documentId && item.ownerId === lawyer?.id);
+    if (!document || document.deletedAt) {
+      throw new Error('Document is inaccessible or has already been deleted.');
+    }
+    document.deletedAt = new Date().toISOString();
+    document.status = 'deleting';
+    workspace.savedAnswers = workspace.savedAnswers.map((answer) => ({
+      ...answer,
+      citations: answer.citations.map((citation) => citation.documentId === documentId
+        ? { ...citation, isAvailable: false }
+        : citation),
+    }));
+    workspace.responses = workspace.responses.map((response) => ({
+      ...response,
+      citations: response.citations.map((citation) => citation.documentId === documentId
+        ? { ...citation, isAvailable: false }
+        : citation),
+    }));
+    writeWorkspace(workspace);
   },
 
   async listResponses(caseId?: string): Promise<QuestionResponse[]> {

@@ -2,10 +2,9 @@ import { useEffect, useState, type FormEvent } from 'react';
 import {
   Archive,
   ArrowLeft,
-  CheckCircle2,
   Edit3,
   FileText,
-  LoaderCircle,
+  RefreshCw,
   RotateCcw,
   Save,
   TriangleAlert,
@@ -13,17 +12,10 @@ import {
 } from 'lucide-react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { apiClient } from '../api/client';
+import { DocumentStatusBadge } from '../components/DocumentStatusBadge';
+import { DocumentUpload, simulateDocumentLifecycle } from '../components/DocumentUpload';
+import { SourceViewer } from '../components/SourceViewer';
 import type { Case, CaseDocument, QuestionResponse, SavedAnswer } from '../types/contracts';
-
-const statusLabel: Record<CaseDocument['status'], string> = {
-  uploaded: 'Uploaded',
-  queued: 'Queued',
-  extracting: 'Extracting',
-  indexing: 'Indexing',
-  ready: 'Ready',
-  failed: 'Failed',
-  deleting: 'Deleting',
-};
 
 type WorkspaceTab = 'documents' | 'ask' | 'saved';
 
@@ -41,6 +33,8 @@ export function CaseDetailPage() {
   const [form, setForm] = useState({ title: '', description: '' });
   const [error, setError] = useState('');
   const [isSaving, setIsSaving] = useState(false);
+  const [sourceDocumentId, setSourceDocumentId] = useState(searchParams.get('doc') ?? '');
+  const [sourcePage, setSourcePage] = useState(Number(searchParams.get('page')) || 1);
 
   const loadWorkspace = () => {
     if (!caseId) {
@@ -67,6 +61,38 @@ export function CaseDetailPage() {
 
   const setTab = (tab: WorkspaceTab) => {
     setSearchParams(tab === 'documents' ? {} : { tab });
+  };
+
+  const openSource = (documentId: string, pageNumber = 1) => {
+    setSourceDocumentId(documentId);
+    setSourcePage(pageNumber);
+    setSearchParams({ tab: 'documents', doc: documentId, page: String(pageNumber) });
+  };
+
+  const updateDocument = (updatedDocument: CaseDocument) => {
+    setDocuments((current) => current.some((item) => item.id === updatedDocument.id)
+      ? current.map((item) => item.id === updatedDocument.id ? updatedDocument : item)
+      : [...current, updatedDocument]);
+  };
+
+  const retryDocument = (document: CaseDocument) => {
+    void apiClient.retryDocumentJob(document.id)
+      .then((queuedDocument) => {
+        updateDocument(queuedDocument);
+        return simulateDocumentLifecycle(queuedDocument, updateDocument);
+      })
+      .catch((reason: unknown) => setError(reason instanceof Error ? reason.message : 'Unable to retry document processing.'));
+  };
+
+  const deleteDocument = (document: CaseDocument) => {
+    if (!window.confirm(`Delete ${document.originalName}? Its citations will remain visible but unavailable.`)) return;
+    void apiClient.deleteDocument(document.id).then(() => {
+      setDocuments((current) => current.filter((item) => item.id !== document.id));
+      if (sourceDocumentId === document.id) {
+        setSourceDocumentId('');
+        setSearchParams({ tab: 'documents' });
+      }
+    }).catch((reason: unknown) => setError(reason instanceof Error ? reason.message : 'Unable to delete document.'));
   };
 
   const openEdit = () => {
@@ -157,6 +183,9 @@ export function CaseDetailPage() {
               <h2 className="font-semibold text-navy">Documents</h2>
               <span className="text-xs text-slate-400">{documents.length} files</span>
             </div>
+            <div className="mt-5">
+              <DocumentUpload caseId={caseItem.id} onUploaded={updateDocument} />
+            </div>
             <div className="mt-5 divide-y divide-slate-100">
               {documents.map((document) => (
                 <div key={document.id} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0">
@@ -165,13 +194,16 @@ export function CaseDetailPage() {
                     <p className="truncate text-sm font-medium text-slate-700">{document.originalName}</p>
                     <p className="mt-1 text-xs text-slate-400">{document.pageCount} pages · Version {document.activeVersion}</p>
                   </div>
-                  <div className={`flex items-center gap-1.5 text-xs font-medium ${document.status === 'ready' ? 'text-emerald-600' : document.status === 'failed' ? 'text-red-500' : 'text-amber-600'}`}>
-                    {document.status === 'ready' ? <CheckCircle2 size={14} /> : document.status === 'failed' ? <TriangleAlert size={14} /> : <LoaderCircle size={14} className="animate-spin" />}
-                    {statusLabel[document.status]}
+                  <div className="flex items-center gap-2">
+                    <DocumentStatusBadge document={document} />
+                    {document.status === 'failed' && <button onClick={() => retryDocument(document)} className="flex items-center gap-1 text-xs font-semibold text-teal hover:underline"><RefreshCw size={13} /> Retry</button>}
+                    {document.status !== 'deleting' && <button onClick={() => openSource(document.id, 1)} className="text-xs font-semibold text-slate-600 hover:text-teal">View Source</button>}
+                    <button onClick={() => deleteDocument(document)} className="text-xs font-semibold text-red-500 hover:underline">Delete</button>
                   </div>
                 </div>
               ))}
             </div>
+            {error && <p className="mt-4 text-sm text-red-600">{error}</p>}
           </div>
         )}
 
@@ -232,6 +264,20 @@ export function CaseDetailPage() {
             </form>
           </div>
         </div>
+      )}
+      {sourceDocumentId && (
+        <SourceViewer
+          documentId={sourceDocumentId}
+          pageNumber={sourcePage}
+          onPageChange={(pageNumber) => {
+            setSourcePage(pageNumber);
+            setSearchParams({ tab: 'documents', doc: sourceDocumentId, page: String(pageNumber) });
+          }}
+          onClose={() => {
+            setSourceDocumentId('');
+            setSearchParams({ tab: 'documents' });
+          }}
+        />
       )}
     </section>
   );
