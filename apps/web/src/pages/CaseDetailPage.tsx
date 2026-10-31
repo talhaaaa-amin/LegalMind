@@ -60,6 +60,11 @@ export function CaseDetailPage() {
     loadWorkspace();
   }, [caseId]);
 
+  useEffect(() => {
+    if (activeTab !== 'saved' || !caseId) return;
+    void apiClient.listSavedAnswers(caseId).then(setSavedAnswers);
+  }, [activeTab, caseId]);
+
   const setTab = (tab: WorkspaceTab) => {
     setSearchParams(tab === 'documents' ? {} : { tab });
   };
@@ -91,7 +96,7 @@ export function CaseDetailPage() {
       setDocuments((current) => current.filter((item) => item.id !== document.id));
       if (sourceDocumentId === document.id) {
         setSourceDocumentId('');
-        setSearchParams({ tab: 'documents' });
+        setSearchParams({ tab: activeTab });
       }
     }).catch((reason: unknown) => setError(reason instanceof Error ? reason.message : 'Unable to delete document.'));
   };
@@ -226,7 +231,17 @@ export function CaseDetailPage() {
                   <div key={answer.id} className="rounded-lg bg-slate-50 p-4">
                     <p className="text-sm font-medium leading-5 text-slate-700">{answer.question}</p>
                     <p className="mt-2 text-sm leading-6 text-slate-500">{answer.answer}</p>
-                    <p className="mt-3 text-[11px] font-semibold uppercase tracking-wider text-teal">{answer.citations.length} citation{answer.citations.length === 1 ? '' : 's'}</p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {answer.citations.map((citation) => citation.isAvailable ? (
+                        <button key={citation.sourceId} onClick={() => openSource(citation.documentId, citation.physicalPage)} className="rounded-md bg-teal/10 px-2 py-1 text-[11px] font-semibold text-teal hover:bg-teal/20">
+                          [{citation.sourceId}] {citation.documentName} · p. {citation.physicalPage}
+                        </button>
+                      ) : (
+                        <span key={citation.sourceId} className="rounded-md bg-slate-200 px-2 py-1 text-[11px] font-semibold text-slate-500">
+                          [{citation.sourceId}] Source Unavailable (Deleted)
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -264,11 +279,11 @@ export function CaseDetailPage() {
           pageNumber={sourcePage}
           onPageChange={(pageNumber) => {
             setSourcePage(pageNumber);
-            setSearchParams({ tab: 'documents', doc: sourceDocumentId, page: String(pageNumber) });
+            setSearchParams({ tab: activeTab, doc: sourceDocumentId, page: String(pageNumber) });
           }}
           onClose={() => {
             setSourceDocumentId('');
-            setSearchParams({ tab: 'documents' });
+            setSearchParams({ tab: activeTab });
           }}
         />
       )}

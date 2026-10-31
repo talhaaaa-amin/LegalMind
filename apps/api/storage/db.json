@@ -1,0 +1,83 @@
+{
+  "lawyers": [
+    {
+      "id": "lawyer-1",
+      "name": "Amelia Hart",
+      "email": "amelia.hart@hartlaw.com",
+      "createdAt": "2024-01-15T09:00:00.000Z",
+      "passwordHash": "demo"
+    },
+    {
+      "id": "lawyer-2",
+      "name": "Marcus Vance",
+      "email": "marcus.vance@vancelaw.com",
+      "createdAt": "2024-03-10T09:00:00.000Z",
+      "passwordHash": "demo"
+    }
+  ],
+  "sessions": [],
+  "cases": [
+    {
+      "id": "case-1",
+      "ownerId": "lawyer-1",
+      "title": "Riverside Development Dispute",
+      "description": "Contract interpretation and notice obligations.",
+      "archived": false,
+      "createdAt": "2025-01-12T10:30:00.000Z",
+      "updatedAt": "2025-02-04T15:45:00.000Z"
+    },
+    {
+      "id": "case-2",
+      "ownerId": "lawyer-1",
+      "title": "Northstar Employment Review",
+      "description": "Review of restrictive covenants.",
+      "archived": false,
+      "createdAt": "2025-01-20T13:15:00.000Z",
+      "updatedAt": "2025-02-02T11:20:00.000Z"
+    },
+    {
+      "id": "case-3",
+      "ownerId": "lawyer-2",
+      "title": "Vance Holdings Acquisition",
+      "description": "Acquisition due diligence review.",
+      "archived": false,
+      "createdAt": "2025-02-08T09:15:00.000Z",
+      "updatedAt": "2025-02-10T16:30:00.000Z"
+    }
+  ],
+  "documents": [
+    {
+      "id": "document-1",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "Riverside Master Agreement.pdf",
+      "pageCount": 84,
+      "activeVersion": 2,
+      "status": "ready",
+      "createdAt": "2025-01-12T11:00:00.000Z"
+    },
+    {
+      "id": "document-3",
+      "caseId": "case-2",
+      "ownerId": "lawyer-1",
+      "originalName": "Executive Employment Agreement.pdf",
+      "pageCount": 31,
+      "activeVersion": 1,
+      "status": "failed",
+      "createdAt": "2025-02-01T09:30:00.000Z"
+    },
+    {
+      "id": "document-4",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "originalName": "Vance Holdings Purchase Agreement.pdf",
+      "pageCount": 67,
+      "activeVersion": 1,
+      "status": "ready",
+      "createdAt": "2025-02-08T10:00:00.000Z"
+    }
+  ],
+  "responses": [],
+  "savedAnswers": [],
+  "pageContents": {}
+}
