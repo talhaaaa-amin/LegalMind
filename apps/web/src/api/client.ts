@@ -657,14 +657,29 @@ export const apiClient = {
     const workspace = readWorkspace();
     const lawyer = requireAuthenticatedLawyer(workspace);
     if (!lawyer) return [];
-    return workspace.savedAnswers.filter(
-      (item) => item.ownerId === lawyer.id && (!caseId || item.caseId === caseId),
-    );
+    return workspace.savedAnswers
+      .filter((item) => item.ownerId === lawyer.id && (!caseId || item.caseId === caseId))
+      .map((item) => ({
+        ...item,
+        citations: item.citations.map((citation) => ({
+          ...citation,
+          isAvailable: citation.isAvailable && Boolean(
+            workspace.documents.find((document) => document.id === citation.documentId && !document.deletedAt),
+          ),
+        })),
+      }));
   },
 
   async saveAnswer(answer: SavedAnswer): Promise<SavedAnswer> {
     await wait();
     const workspace = readWorkspace();
+    const lawyer = requireAuthenticatedLawyer(workspace);
+    if (!lawyer || answer.ownerId !== lawyer.id) {
+      throw new Error('You can only save answers in your own workspace.');
+    }
+    if (!workspace.cases.some((item) => item.id === answer.caseId && item.ownerId === lawyer.id)) {
+      throw new Error('Case not found or inaccessible.');
+    }
     workspace.savedAnswers.push(clone(answer));
     writeWorkspace(workspace);
     return clone(answer);

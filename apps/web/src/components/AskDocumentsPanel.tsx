@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react';
-import { AlertCircle, CheckCircle2, FileSearch, Info, RotateCcw, Send, ShieldAlert } from 'lucide-react';
+import { AlertCircle, Bookmark, CheckCircle2, FileSearch, Info, RotateCcw, Send, ShieldAlert } from 'lucide-react';
 import { apiClient } from '../api/client';
-import type { AnswerStatus, Case, CaseDocument, Citation, QuestionResponse } from '../types/contracts';
+import { ConversationList } from './ConversationList';
+import type { AnswerStatus, Case, CaseDocument, Citation, QuestionResponse, SavedAnswer } from '../types/contracts';
 
 type Simulation = 'auto' | AnswerStatus;
 
@@ -20,9 +21,9 @@ const simulationOptions: { value: Simulation; label: string }[] = [
 ];
 
 const promptsByCase: Record<string, string[]> = {
-  'case-1': ['What notice period applies to a material delay?', 'What must a delay notice contain?'],
-  'case-2': ['Is the non-solicitation clause time-limited?', 'What restrictions apply after termination?'],
-  'case-3': ['Which representations survive the closing date?', 'What obligations continue after closing?'],
+  'case-1': ['What notice period is required before termination?', 'Compare payment obligations with invoice records', 'What is the governing law?'],
+  'case-2': ['Is the non-solicitation clause time-limited?', 'What restrictions apply after termination?', 'What is the governing law?'],
+  'case-3': ['Which representations survive the closing date?', 'Compare payment obligations with invoice records', 'What is the governing law?'],
 };
 
 function statusLabel(status: AnswerStatus) {
@@ -56,6 +57,9 @@ export function AskDocumentsPanel({ caseItem, documents, initialResponses, onOpe
   const [serviceError, setServiceError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastQuestion, setLastQuestion] = useState('');
+  const [selectedResponseId, setSelectedResponseId] = useState<string>();
+  const [savedResponseIds, setSavedResponseIds] = useState<string[]>([]);
+  const [saveError, setSaveError] = useState('');
 
   useEffect(() => {
     setSelectedIds(readyDocuments.map((document) => document.id));
@@ -77,6 +81,7 @@ export function AskDocumentsPanel({ caseItem, documents, initialResponses, onOpe
     }).then((response) => {
       setResponses((current) => [response, ...current]);
       setLatestResponse(response);
+      setSelectedResponseId(response.id);
       setLastQuestion(submittedQuestion);
       setQuestion('');
     }).catch((reason: unknown) => {
@@ -94,8 +99,44 @@ export function AskDocumentsPanel({ caseItem, documents, initialResponses, onOpe
 
   const displayResponse = latestResponse ?? responses[0];
 
+  const saveResponse = async (response: QuestionResponse) => {
+    setSaveError('');
+    try {
+      const lawyer = await apiClient.getCurrentLawyer();
+      if (!lawyer) throw new Error('Sign in to save an answer.');
+      const saved: SavedAnswer = {
+        id: `saved-${Date.now()}`,
+        caseId: response.caseId,
+        ownerId: lawyer.id,
+        question: response.question,
+        answer: response.answer,
+        citations: response.citations,
+        createdAt: new Date().toISOString(),
+      };
+      await apiClient.saveAnswer(saved);
+      setSavedResponseIds((current) => [...current, response.id]);
+    } catch (reason) {
+      setSaveError(reason instanceof Error ? reason.message : 'Unable to save answer.');
+    }
+  };
+
   return (
-    <div className="space-y-5">
+    <div className="grid gap-5 lg:grid-cols-[220px_minmax(0,1fr)]">
+      <ConversationList
+        responses={responses}
+        selectedId={selectedResponseId ?? displayResponse?.id}
+        onSelect={(response) => {
+          setLatestResponse(response);
+          setSelectedResponseId(response.id);
+          setServiceError('');
+        }}
+        onFollowUp={() => {
+          setLatestResponse(undefined);
+          setSelectedResponseId(undefined);
+          setQuestion('');
+        }}
+      />
+      <div className="space-y-5">
       <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2"><FileSearch size={17} className="text-teal" /><span className="text-sm font-semibold text-navy">Search scope</span><span className="rounded-full bg-teal/10 px-2.5 py-1 text-xs font-semibold text-teal">{caseItem.title}</span></div>
@@ -133,9 +174,14 @@ export function AskDocumentsPanel({ caseItem, documents, initialResponses, onOpe
 
       {displayResponse && !serviceError && (
         <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
             {displayResponse.status === 'answered' ? <CheckCircle2 size={17} className="text-emerald-600" /> : displayResponse.status === 'partial' ? <Info size={17} className="text-amber-600" /> : <ShieldAlert size={17} className="text-slate-500" />}
             <span className={`rounded-full px-2.5 py-1 text-xs font-bold ${displayResponse.status === 'answered' ? 'bg-emerald-50 text-emerald-700' : displayResponse.status === 'partial' ? 'bg-amber-50 text-amber-700' : 'bg-slate-100 text-slate-600'}`}>{statusLabel(displayResponse.status)}</span>
+            </div>
+            <button disabled={savedResponseIds.includes(displayResponse.id)} onClick={() => void saveResponse(displayResponse)} className="flex items-center gap-1.5 rounded-lg border border-slate-200 px-2.5 py-1.5 text-xs font-semibold text-slate-600 hover:border-teal/40 hover:text-teal disabled:opacity-60">
+              <Bookmark size={14} className={savedResponseIds.includes(displayResponse.id) ? 'fill-teal text-teal' : ''} /> {savedResponseIds.includes(displayResponse.id) ? 'Saved' : 'Save Answer'}
+            </button>
           </div>
           <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-slate-400">{displayResponse.question}</p>
           {displayResponse.status === 'insufficient_evidence' && <div className="mt-4 rounded-lg bg-slate-50 p-4 text-sm text-slate-600">LegalMind abstained because the selected sources do not contain enough directly relevant evidence.</div>}
@@ -144,6 +190,8 @@ export function AskDocumentsPanel({ caseItem, documents, initialResponses, onOpe
           {displayResponse.citations.length > 0 && <div className="mt-6 border-t border-slate-100 pt-5"><h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">Supporting evidence & citations</h3><div className="mt-3 space-y-3">{displayResponse.citations.map((citation) => <button key={citation.sourceId} disabled={!citation.isAvailable} onClick={() => citation.isAvailable && onOpenSource(citation.documentId, citation.physicalPage)} className={`block w-full rounded-lg p-4 text-left ${citation.isAvailable ? 'bg-slate-50 hover:bg-teal/5' : 'bg-slate-50 opacity-70'}`}><div className="flex items-center justify-between gap-3"><span className="text-xs font-bold text-teal">[{citation.sourceId}] {citation.documentName}</span><span className="text-[11px] text-slate-400">Version {citation.version} · Page {citation.physicalPage}</span></div><p className="mt-2 text-xs leading-5 text-slate-500">“{citation.excerpt}”</p><span className="mt-2 inline-block text-[11px] font-semibold text-slate-400">{citation.isAvailable ? 'View source' : 'Source unavailable'}</span></button>)}</div></div>}
         </div>
       )}
+      {saveError && <p className="text-xs text-red-600">{saveError}</p>}
+      </div>
     </div>
   );
 }
