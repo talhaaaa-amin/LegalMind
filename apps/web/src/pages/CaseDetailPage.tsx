@@ -14,6 +14,7 @@ import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { apiClient } from '../api/client';
 import { DocumentStatusBadge } from '../components/DocumentStatusBadge';
 import { DocumentUpload, simulateDocumentLifecycle } from '../components/DocumentUpload';
+import { AskDocumentsPanel } from '../components/AskDocumentsPanel';
 import { SourceViewer } from '../components/SourceViewer';
 import type { Case, CaseDocument, QuestionResponse, SavedAnswer } from '../types/contracts';
 
@@ -66,7 +67,7 @@ export function CaseDetailPage() {
   const openSource = (documentId: string, pageNumber = 1) => {
     setSourceDocumentId(documentId);
     setSourcePage(pageNumber);
-    setSearchParams({ tab: 'documents', doc: documentId, page: String(pageNumber) });
+    setSearchParams({ tab: activeTab, doc: documentId, page: String(pageNumber) });
   };
 
   const updateDocument = (updatedDocument: CaseDocument) => {
@@ -208,20 +209,12 @@ export function CaseDetailPage() {
         )}
 
         {activeTab === 'ask' && (
-          <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="font-semibold text-navy">Recent questions</h2>
-            {responses.length === 0 ? <p className="mt-5 text-sm text-slate-500">No questions have been asked for this matter yet.</p> : (
-              <div className="mt-5 space-y-4">
-                {responses.map((response) => (
-                  <div key={response.id} className="rounded-lg bg-slate-50 p-4">
-                    <p className="text-sm font-medium leading-5 text-slate-700">{response.question}</p>
-                    <p className="mt-2 text-sm leading-6 text-slate-500">{response.answer}</p>
-                    <p className="mt-3 text-[11px] font-semibold uppercase tracking-wider text-teal">{response.citations.length} citation{response.citations.length === 1 ? '' : 's'}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          <AskDocumentsPanel
+            caseItem={caseItem}
+            documents={documents}
+            initialResponses={responses}
+            onOpenSource={openSource}
+          />
         )}
 
         {activeTab === 'saved' && (

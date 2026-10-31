@@ -2,6 +2,8 @@ import type {
   Case,
   CaseDocument,
   Lawyer,
+  AnswerStatus,
+  Citation,
   QuestionResponse,
   SavedAnswer,
 } from '../types/contracts';
@@ -118,7 +120,7 @@ const seedData: WorkspaceData = {
       answer: 'The contractor must provide written notice within five business days after becoming aware of a material delay. The notice must describe the cause, anticipated duration, and mitigation steps.',
       citations: [
         {
-          sourceId: 'source-1',
+          sourceId: 'S1',
           documentId: 'document-1',
           documentName: 'Riverside Master Agreement.pdf',
           version: 2,
@@ -136,10 +138,10 @@ const seedData: WorkspaceData = {
       caseId: 'case-2',
       question: 'Is the post-employment non-solicitation clause time-limited?',
       status: 'partial',
-      answer: 'The available agreement text indicates a twelve-month restriction, but the document requires re-indexing before the definition and geographic scope can be confirmed.',
+      answer: 'The available agreement text indicates a twelve-month restriction [S2], but the document requires re-indexing before the definition and geographic scope can be confirmed.',
       citations: [
         {
-          sourceId: 'source-2',
+          sourceId: 'S2',
           documentId: 'document-3',
           documentName: 'Executive Employment Agreement.pdf',
           version: 1,
@@ -158,10 +160,10 @@ const seedData: WorkspaceData = {
       caseId: 'case-3',
       question: 'Which representations survive the closing date?',
       status: 'answered',
-      answer: 'The fundamental representations survive until the applicable statute of limitations, while the remaining representations survive for eighteen months after closing.',
+      answer: 'The fundamental representations survive until the applicable statute of limitations [S3], while the remaining representations survive for eighteen months after closing.',
       citations: [
         {
-          sourceId: 'source-3',
+          sourceId: 'S3',
           documentId: 'document-4',
           documentName: 'Vance Holdings Purchase Agreement.pdf',
           version: 1,
@@ -252,6 +254,17 @@ function readWorkspace(): WorkspaceData {
       savedAnswers: workspace.savedAnswers ?? [],
       pageContents: workspace.pageContents ?? seedData.pageContents,
     };
+    migratedWorkspace.responses = migratedWorkspace.responses.map((response) => ({
+      ...response,
+      answer: response.answer
+        .replace(/\[source-1\]/g, '[S1]')
+        .replace(/\[source-2\]/g, '[S2]')
+        .replace(/\[source-3\]/g, '[S3]'),
+      citations: response.citations.map((citation) => ({
+        ...citation,
+        sourceId: citation.sourceId.replace('source-1', 'S1').replace('source-2', 'S2').replace('source-3', 'S3'),
+      })),
+    }));
     writeWorkspace(migratedWorkspace);
     return migratedWorkspace;
   } catch (error) {
@@ -537,6 +550,93 @@ export const apiClient = {
         : citation),
     }));
     writeWorkspace(workspace);
+  },
+
+  async askQuestion(
+    caseId: string,
+    input: { question: string; documentIds?: string[]; simulateOutcome?: AnswerStatus },
+  ): Promise<QuestionResponse> {
+    await wait(250);
+    const workspace = readWorkspace();
+    const { caseItem } = requireCaseOwner(workspace, caseId);
+    const question = input.question.trim();
+    if (!question) {
+      throw new Error('Please enter a question.');
+    }
+
+    const caseDocuments = workspace.documents.filter(
+      (document) => document.caseId === caseId && document.ownerId === caseItem.ownerId && !document.deletedAt,
+    );
+    const requestedIds = input.documentIds ?? caseDocuments.filter((document) => document.status === 'ready').map((document) => document.id);
+    const scopedDocuments = requestedIds.map((documentId) => caseDocuments.find((document) => document.id === documentId));
+    if (scopedDocuments.some((document) => !document || document.status !== 'ready')) {
+      throw new Error('Every selected document must belong to this case and be ready for search.');
+    }
+    const readyDocuments = scopedDocuments.filter((document): document is CaseDocument => Boolean(document));
+
+    if (input.simulateOutcome === 'error') {
+      throw new Error('RAG service timed out while contacting the model provider. Please retry.');
+    }
+
+    const responseBase = {
+      id: `response-${Date.now()}`,
+      caseId,
+      question,
+      retrievalConfigVersion: 'rag-2025-01',
+      createdAt: new Date().toISOString(),
+    };
+    const isUnrelated = /\b(unrelated|tax|criminal)\b/i.test(question);
+    if (!readyDocuments.length || input.simulateOutcome === 'insufficient_evidence' || isUnrelated) {
+      const response: QuestionResponse = {
+        ...responseBase,
+        status: 'insufficient_evidence',
+        answer: 'I cannot answer this question from the selected, indexed case documents. I am abstaining rather than inferring beyond the available evidence.',
+        citations: [],
+        limitations: 'Add or select a ready source containing directly relevant language, then retry.',
+      };
+      workspace.responses.unshift(response);
+      writeWorkspace(workspace);
+      return clone(response);
+    }
+
+    const citationCandidates: Citation[] = [];
+    readyDocuments.forEach((document) => {
+      const pages = Object.keys(workspace.pageContents[document.id] ?? {}).map(Number).sort((a, b) => a - b);
+      const preferredPage: Record<string, number> = {
+        'document-1': 42,
+        'document-3': 18,
+        'document-4': 55,
+      };
+      const page = preferredPage[document.id] && pages.includes(preferredPage[document.id])
+        ? preferredPage[document.id]
+        : pages[0] ?? 1;
+      const content = workspace.pageContents[document.id]?.[String(page)]?.content
+        ?? `Page ${page} of ${document.originalName} is ready for review.`;
+      citationCandidates.push({
+        sourceId: `S${citationCandidates.length + 1}`,
+        documentId: document.id,
+        documentName: document.originalName,
+        version: document.activeVersion,
+        chunkId: `chunk-${String(page).padStart(3, '0')}`,
+        physicalPage: page,
+        excerpt: content,
+        isAvailable: true,
+      });
+    });
+    const citations = citationCandidates.slice(0, Math.min(2, citationCandidates.length));
+    const isPartial = input.simulateOutcome === 'partial';
+    const response: QuestionResponse = {
+      ...responseBase,
+      status: isPartial ? 'partial' : 'answered',
+      answer: isPartial
+        ? `The indexed documents provide a likely answer to this question [${citations[0].sourceId}], but the available record does not resolve every issue.`
+        : `Based on the selected case documents, the relevant provision addresses this issue directly [${citations[0].sourceId}]. Review the cited page for the controlling language.`,
+      citations,
+      limitations: isPartial ? 'Some potentially relevant documents or provisions are not indexed in the selected scope.' : undefined,
+    };
+    workspace.responses.unshift(response);
+    writeWorkspace(workspace);
+    return clone(response);
   },
 
   async listResponses(caseId?: string): Promise<QuestionResponse[]> {
