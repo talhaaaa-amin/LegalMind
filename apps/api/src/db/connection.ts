@@ -48,7 +48,10 @@ const initialWorkspace: JsonWorkspace = {
     { id: 'response-3', caseId: 'case-3', question: 'What is the governing law?', status: 'answered', answer: 'The agreement is governed by Delaware law [S3].', citations: [{ sourceId: 'S3', documentId: 'document-4', documentName: 'Vance Holdings Purchase Agreement.pdf', version: 1, chunkId: 'chunk-055', physicalPage: 55, excerpt: 'This agreement and any dispute arising from it are governed by the laws of the State of Delaware.', isAvailable: true }], retrievalConfigVersion: 'rag-2025-01', createdAt: '2025-02-07T10:00:00.000Z' },
   ],
   savedAnswers: [],
-  jobs: [],
+  jobs: [
+    { id: 'job-document-2', documentId: 'document-2', version: 1, state: 'indexing', attemptCount: 0, updatedAt: '2025-02-04T14:00:00.000Z' },
+    { id: 'job-document-3', documentId: 'document-3', version: 1, state: 'failed', attemptCount: 1, errorCode: 'EXTRACTION_UNSUPPORTED_TABLE', updatedAt: '2025-02-01T09:30:00.000Z' },
+  ],
   pageContents: {
     'document-1': {
       '40': { sectionTitle: 'Notice and Cure', content: 'A party must provide written notice of a material delay and allow the contractual cure period before pursuing remedies.' },
@@ -117,7 +120,10 @@ export async function connectStorage(): Promise<Repository> {
         })(),
         savedAnswers: parsed.savedAnswers ?? [],
         pageContents: parsed.pageContents ?? {},
-        jobs: parsed.jobs ?? [],
+        jobs: initialWorkspace.jobs.map((seed) =>
+          (parsed.jobs ?? []).find((job) => job.id === seed.id) ?? seed,
+        ).concat((parsed.jobs ?? []).filter((job) =>
+          !initialWorkspace.jobs.some((seed) => seed.id === job.id))),
       };
       await fs.writeFile(filePath, JSON.stringify(workspace, null, 2));
       return workspace;
