@@ -5,6 +5,7 @@ import { casesController } from './controller.js';
 import { caseDocumentsRoutes } from '../documents/routes.js';
 import { caseQuestionsRoutes } from '../questions/routes.js';
 import { caseSavedAnswersRoutes } from '../savedAnswers/routes.js';
+import { caseConversationsRoutes } from '../conversations/routes.js';
 
 export function casesRoutes(repository: Repository) {
   const router = Router();
@@ -13,6 +14,7 @@ export function casesRoutes(repository: Repository) {
   router.use('/:caseId/documents', caseDocumentsRoutes(repository));
   router.use('/:caseId/questions', caseQuestionsRoutes(repository));
   router.use('/:caseId/saved-answers', caseSavedAnswersRoutes(repository));
+  router.use('/:caseId/conversations', caseConversationsRoutes(repository));
   router.get('/', controller.listHandler);
   router.post('/', controller.createHandler);
   router.get('/:id', controller.getHandler);

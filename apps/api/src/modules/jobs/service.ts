@@ -1,5 +1,6 @@
 import type { Repository } from '../../db/connection.js';
 import { claimNext, update } from './model.js';
+import { materializeDocumentChunks } from '../chunks/service.js';
 
 const MAX_ATTEMPTS = 3;
 
@@ -27,6 +28,11 @@ export async function processNextJob(repository: Repository): Promise<boolean> {
       : job.state === 'extracting'
         ? 'indexing'
         : 'ready';
+    if (nextState === 'ready') {
+      const chunks = await materializeDocumentChunks(repository, document.id);
+      workspace.chunks = workspace.chunks.filter((chunk) => chunk.documentId !== document.id);
+      workspace.chunks.push(...chunks);
+    }
     document.status = nextState;
     if (nextState === 'ready') delete document.errorCode;
     currentJob.state = nextState;

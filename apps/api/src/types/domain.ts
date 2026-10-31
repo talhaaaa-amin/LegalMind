@@ -49,9 +49,24 @@ export interface JobRecord {
   updatedAt: string;
 }
 
+export interface ChunkRecord {
+  id: string;
+  documentId: string;
+  caseId: string;
+  ownerId: string;
+  version: number;
+  physicalPage: number;
+  sectionTitle: string;
+  content: string;
+  parserVersion: string;
+  chunkerVersion: string;
+  createdAt: string;
+}
+
 export interface QuestionResponse {
   id: string;
   caseId: string;
+  ownerId: string;
   question: string;
   status: string;
   answer: string;

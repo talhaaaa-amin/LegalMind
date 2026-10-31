@@ -3,6 +3,7 @@ import type { Repository } from '../../db/connection.js';
 import { AppError } from '../../errors/AppError.js';
 import type { QuestionResponse } from '../../types/domain.js';
 import { create, list } from './model.js';
+import { retrieve, RETRIEVAL_CONFIG_VERSION } from '../retrieval/service.js';
 
 async function requireCase(repository: Repository, ownerId: string, caseId: string) {
   const workspace = await repository.read();
@@ -25,7 +26,7 @@ function availableResponse(response: QuestionResponse, workspace: Awaited<Return
 
 export async function listQuestions(repository: Repository, ownerId: string, caseId: string) {
   const workspace = await requireCase(repository, ownerId, caseId);
-  return (await list(repository, caseId)).map((response) => availableResponse(response, workspace));
+  return (await list(repository, caseId, ownerId)).map((response) => availableResponse(response, workspace));
 }
 
 async function askRemote(question: string, documentIds: string[]) {
@@ -64,22 +65,60 @@ export async function askQuestion(repository: Repository, ownerId: string, caseI
   if (input.simulateOutcome === 'error') {
     throw new AppError(503, 'RAG_PROVIDER_UNAVAILABLE', 'RAG service timed out while contacting the model provider. Please retry.');
   }
-  const remote = await askRemote(input.question.trim(), requestedIds);
-  const base = { id: `response-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, caseId, question: input.question.trim(), retrievalConfigVersion: 'rag-2025-01', createdAt: new Date().toISOString() };
+  const remote = input.simulateOutcome === 'fallback'
+    ? null
+    : await askRemote(input.question.trim(), requestedIds);
+  const base = { id: `response-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, caseId, ownerId, question: input.question.trim(), retrievalConfigVersion: RETRIEVAL_CONFIG_VERSION, createdAt: new Date().toISOString() };
   let response: QuestionResponse;
   if (remote?.answer && Array.isArray(remote.citations)) {
-    const citations = remote.citations.filter((citation) => typeof citation === 'object' && citation !== null && 'documentId' in citation && requestedIds.includes(citation.documentId as string));
+    const authorizedChunks = await retrieve(repository, ownerId, caseId, base.question, requestedIds, 20);
+    const citations = remote.citations.map((citation, index) => {
+      if (typeof citation !== 'object' || citation === null) return null;
+      const candidate = citation as Record<string, unknown>;
+      const chunk = authorizedChunks.find((item) =>
+        item.id === candidate.chunkId ||
+        (item.documentId === candidate.documentId && item.physicalPage === candidate.physicalPage));
+      const document = chunk && readyDocuments.find((item) => item.id === chunk.documentId);
+      if (!chunk || !document) return null;
+      return {
+        sourceId: `S${index + 1}`,
+        documentId: document.id,
+        documentName: document.originalName,
+        version: document.activeVersion,
+        chunkId: chunk.id,
+        physicalPage: chunk.physicalPage,
+        excerpt: chunk.content,
+        isAvailable: true,
+      };
+    }).filter((citation): citation is NonNullable<typeof citation> => citation !== null);
+    if (citations.length === 0) {
+      return askQuestion(repository, ownerId, caseId, { ...input, simulateOutcome: 'fallback' });
+    }
     response = { ...base, status: remote.status === 'partial' ? 'partial' : 'answered', answer: remote.answer, citations, limitations: remote.limitations };
   } else {
     const unrelated = /\b(unrelated|tax|criminal)\b/i.test(base.question);
     if (!eligible.length || unrelated || input.simulateOutcome === 'insufficient_evidence') {
       response = { ...base, status: 'insufficient_evidence', answer: 'I cannot answer this question from the selected, indexed case documents. I am abstaining rather than inferring beyond the available evidence.', citations: [], limitations: 'Add or select a ready source containing directly relevant language, then retry.' };
     } else {
-      const citations = readyDocuments.slice(0, 2).map((document, index) => {
-        const preferred = document.id === 'document-1' ? 42 : document.id === 'document-3' ? 18 : document.id === 'document-4' ? 55 : 1;
-        const page = workspace.pageContents[document.id]?.[String(preferred)] ?? { sectionTitle: 'Document text', content: `Page ${preferred} of ${document.originalName} is ready for review.` };
-        return { sourceId: `S${index + 1}`, documentId: document.id, documentName: document.originalName, version: document.activeVersion, chunkId: `chunk-${preferred}`, physicalPage: preferred, excerpt: page.content, isAvailable: true };
-      });
+      const retrieved = await retrieve(repository, ownerId, caseId, base.question, requestedIds);
+      const evidence = retrieved.length > 0 ? retrieved : readyDocuments.map((document) => ({
+        id: `${document.id}-page-fallback`,
+        documentId: document.id,
+        caseId,
+        ownerId,
+        version: document.activeVersion,
+        physicalPage: document.id === 'document-1' ? 42 : document.id === 'document-3' ? 18 : document.id === 'document-4' ? 55 : 1,
+        sectionTitle: 'Document text',
+        content: workspace.pageContents[document.id]?.[String(document.id === 'document-1' ? 42 : document.id === 'document-3' ? 18 : document.id === 'document-4' ? 55 : 1)]?.content ?? `Page 1 of ${document.originalName} is ready for review.`,
+        parserVersion: 'fallback',
+        chunkerVersion: 'fallback',
+        createdAt: new Date().toISOString(),
+      }));
+      const citations = evidence.slice(0, 2).map((chunk, index) => {
+        const document = readyDocuments.find((item) => item.id === chunk.documentId);
+        if (!document) return null;
+        return { sourceId: `S${index + 1}`, documentId: document.id, documentName: document.originalName, version: document.activeVersion, chunkId: chunk.id, physicalPage: chunk.physicalPage, excerpt: chunk.content, isAvailable: true };
+      }).filter((citation): citation is NonNullable<typeof citation> => citation !== null);
       const partial = input.simulateOutcome === 'partial';
       response = { ...base, status: partial ? 'partial' : 'answered', answer: `Based on the selected case documents, the relevant provision addresses this issue directly [${citations[0].sourceId}].`, citations, limitations: partial ? 'Some potentially relevant documents or provisions are not indexed in the selected scope.' : undefined };
     }

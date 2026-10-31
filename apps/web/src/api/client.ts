@@ -890,6 +890,15 @@ export const apiClient = {
     );
   },
 
+  async listConversations(caseId: string): Promise<QuestionResponse[]> {
+    await wait();
+    const remote = await documentRequest<{ responses: QuestionResponse[] }>(
+      `/conversations?caseId=${encodeURIComponent(caseId)}`,
+    );
+    if (remote) return clone(remote.responses);
+    return this.listResponses(caseId);
+  },
+
   async listSavedAnswers(caseId?: string): Promise<SavedAnswer[]> {
     await wait();
     const remote = await documentRequest<{ savedAnswers: SavedAnswer[] }>(
@@ -937,6 +946,21 @@ export const apiClient = {
     workspace.savedAnswers.push(clone(answer));
     writeWorkspace(workspace);
     return clone(answer);
+  },
+
+  async deleteSavedAnswer(savedAnswerId: string): Promise<void> {
+    await wait();
+    const remote = await documentRequest<{ ok: boolean }>(
+      `/saved-answers/${encodeURIComponent(savedAnswerId)}`,
+      { method: 'DELETE' },
+    );
+    if (remote) return;
+    const workspace = readWorkspace();
+    const lawyer = requireAuthenticatedLawyer(workspace);
+    if (!lawyer) throw new Error('You must be signed in to delete a saved answer.');
+    workspace.savedAnswers = workspace.savedAnswers.filter((answer) =>
+      !(answer.id === savedAnswerId && answer.ownerId === lawyer.id));
+    writeWorkspace(workspace);
   },
 
   async reset(): Promise<void> {

@@ -9,6 +9,8 @@ import { casesRoutes } from './modules/cases/routes.js';
 import { documentsRoutes } from './modules/documents/routes.js';
 import { questionsRoutes } from './modules/questions/routes.js';
 import { savedAnswersRoutes } from './modules/savedAnswers/routes.js';
+import { retrievalRoutes } from './modules/retrieval/routes.js';
+import { conversationsRoutes } from './modules/conversations/routes.js';
 
 export function createApp(repository: Repository) {
   const app = express();
@@ -29,6 +31,8 @@ export function createApp(repository: Repository) {
   app.use('/api/documents', documentsRoutes(repository));
   app.use('/api/questions', questionsRoutes(repository));
   app.use('/api/saved-answers', savedAnswersRoutes(repository));
+  app.use('/api/retrieval', retrievalRoutes(repository));
+  app.use('/api/conversations', conversationsRoutes(repository));
 
   app.use(errorHandler);
   return app;

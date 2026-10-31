@@ -10,6 +10,7 @@ import type {
   SavedAnswer,
   SessionRecord,
   JobRecord,
+  ChunkRecord,
 } from '../types/domain.js';
 
 export type StorageMode = 'mongodb' | 'json';
@@ -23,6 +24,7 @@ export interface JsonWorkspace {
   savedAnswers: SavedAnswer[];
   pageContents: Record<string, Record<string, { sectionTitle: string; content: string }>>;
   jobs: JobRecord[];
+  chunks: ChunkRecord[];
 }
 
 const initialWorkspace: JsonWorkspace = {
@@ -43,15 +45,16 @@ const initialWorkspace: JsonWorkspace = {
     { id: 'document-4', caseId: 'case-3', ownerId: 'lawyer-2', originalName: 'Vance Holdings Purchase Agreement.pdf', pageCount: 67, activeVersion: 1, status: 'ready', createdAt: '2025-02-08T10:00:00.000Z' },
   ],
   responses: [
-    { id: 'response-1', caseId: 'case-1', question: 'What notice period applies to a material delay?', status: 'answered', answer: 'The delayed party must provide written notice within ten business days [S1].', citations: [{ sourceId: 'S1', documentId: 'document-1', documentName: 'Riverside Master Agreement.pdf', version: 2, chunkId: 'chunk-042', physicalPage: 42, excerpt: 'The delayed party shall provide written notice within ten (10) business days after discovering the delay.', isAvailable: true }], retrievalConfigVersion: 'rag-2025-01', createdAt: '2025-02-05T10:00:00.000Z' },
-    { id: 'response-2', caseId: 'case-2', question: 'What notice is required before termination?', status: 'partial', answer: 'Termination requires written notice specifying the material breach [S2].', citations: [{ sourceId: 'S2', documentId: 'document-3', documentName: 'Executive Employment Agreement.pdf', version: 1, chunkId: 'chunk-018', physicalPage: 18, excerpt: 'A termination notice must be delivered in writing and specify the material breach.', isAvailable: true }], limitations: 'The document is currently awaiting a successful extraction retry.', retrievalConfigVersion: 'rag-2025-01', createdAt: '2025-02-06T10:00:00.000Z' },
-    { id: 'response-3', caseId: 'case-3', question: 'What is the governing law?', status: 'answered', answer: 'The agreement is governed by Delaware law [S3].', citations: [{ sourceId: 'S3', documentId: 'document-4', documentName: 'Vance Holdings Purchase Agreement.pdf', version: 1, chunkId: 'chunk-055', physicalPage: 55, excerpt: 'This agreement and any dispute arising from it are governed by the laws of the State of Delaware.', isAvailable: true }], retrievalConfigVersion: 'rag-2025-01', createdAt: '2025-02-07T10:00:00.000Z' },
+    { id: 'response-1', caseId: 'case-1', ownerId: 'lawyer-1', question: 'What notice period applies to a material delay?', status: 'answered', answer: 'The delayed party must provide written notice within ten business days [S1].', citations: [{ sourceId: 'S1', documentId: 'document-1', documentName: 'Riverside Master Agreement.pdf', version: 2, chunkId: 'chunk-042', physicalPage: 42, excerpt: 'The delayed party shall provide written notice within ten (10) business days after discovering the delay.', isAvailable: true }], retrievalConfigVersion: 'rag-2025-01', createdAt: '2025-02-05T10:00:00.000Z' },
+    { id: 'response-2', caseId: 'case-2', ownerId: 'lawyer-1', question: 'What notice is required before termination?', status: 'partial', answer: 'Termination requires written notice specifying the material breach [S2].', citations: [{ sourceId: 'S2', documentId: 'document-3', documentName: 'Executive Employment Agreement.pdf', version: 1, chunkId: 'chunk-018', physicalPage: 18, excerpt: 'A termination notice must be delivered in writing and specify the material breach.', isAvailable: true }], limitations: 'The document is currently awaiting a successful extraction retry.', retrievalConfigVersion: 'rag-2025-01', createdAt: '2025-02-06T10:00:00.000Z' },
+    { id: 'response-3', caseId: 'case-3', ownerId: 'lawyer-2', question: 'What is the governing law?', status: 'answered', answer: 'The agreement is governed by Delaware law [S3].', citations: [{ sourceId: 'S3', documentId: 'document-4', documentName: 'Vance Holdings Purchase Agreement.pdf', version: 1, chunkId: 'chunk-055', physicalPage: 55, excerpt: 'This agreement and any dispute arising from it are governed by the laws of the State of Delaware.', isAvailable: true }], retrievalConfigVersion: 'rag-2025-01', createdAt: '2025-02-07T10:00:00.000Z' },
   ],
   savedAnswers: [],
   jobs: [
     { id: 'job-document-2', documentId: 'document-2', version: 1, state: 'indexing', attemptCount: 0, updatedAt: '2025-02-04T14:00:00.000Z' },
     { id: 'job-document-3', documentId: 'document-3', version: 1, state: 'failed', attemptCount: 1, errorCode: 'EXTRACTION_UNSUPPORTED_TABLE', updatedAt: '2025-02-01T09:30:00.000Z' },
   ],
+  chunks: [],
   pageContents: {
     'document-1': {
       '40': { sectionTitle: 'Notice and Cure', content: 'A party must provide written notice of a material delay and allow the contractual cure period before pursuing remedies.' },
@@ -114,9 +117,13 @@ export async function connectStorage(): Promise<Repository> {
         documents: parsed.documents ?? [],
         responses: (() => {
           const existing = parsed.responses ?? [];
-          return initialWorkspace.responses.map((seed) => existing.some((item) => item.id === seed.id) ? existing.find((item) => item.id === seed.id)! : seed).concat(
-            existing.filter((item) => !initialWorkspace.responses.some((seed) => seed.id === item.id)),
-          );
+          return initialWorkspace.responses.map((seed) => existing.some((item) => item.id === seed.id)
+            ? existing.find((item) => item.id === seed.id)!
+            : seed).concat(existing.filter((item) =>
+              !initialWorkspace.responses.some((seed) => seed.id === item.id))).map((response) => ({
+                ...response,
+                ownerId: response.ownerId ?? parsed.cases?.find((item) => item.id === response.caseId)?.ownerId ?? '',
+              }));
         })(),
         savedAnswers: parsed.savedAnswers ?? [],
         pageContents: parsed.pageContents ?? {},
@@ -124,6 +131,7 @@ export async function connectStorage(): Promise<Repository> {
           (parsed.jobs ?? []).find((job) => job.id === seed.id) ?? seed,
         ).concat((parsed.jobs ?? []).filter((job) =>
           !initialWorkspace.jobs.some((seed) => seed.id === job.id))),
+        chunks: parsed.chunks ?? [],
       };
       await fs.writeFile(filePath, JSON.stringify(workspace, null, 2));
       return workspace;
