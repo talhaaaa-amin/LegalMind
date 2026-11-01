@@ -15,7 +15,7 @@ import { conversationsRoutes } from './modules/conversations/routes.js';
 export function createApp(repository: Repository) {
   const app = express();
   app.use(cors({ origin: env.CORS_ORIGIN, credentials: true }));
-  app.use(express.json());
+  app.use(express.json({ limit: '30mb' }));
   app.use(requestId);
 
   app.get('/api/health', (_req, res) => {

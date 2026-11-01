@@ -49,10 +49,14 @@ export function DocumentUpload({ caseId, onUploaded }: DocumentUploadProps) {
     }
     setIsUploading(true);
     try {
+      const bytes = new Uint8Array(await file.arrayBuffer());
+      let binary = '';
+      bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
       const document = await apiClient.uploadDocument(caseId, {
         name: file.name,
         size: file.size,
         type: file.type,
+        content: `base64:${window.btoa(binary)}`,
         simulateFailure,
       });
       onUploaded(document);

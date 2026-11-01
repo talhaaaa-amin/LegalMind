@@ -3,6 +3,7 @@ import { AppError } from '../../errors/AppError.js';
 import { deletePrivateDocument, savePrivateDocument } from '../../storage/fileStore.js';
 import type { CaseDocument, JobRecord } from '../../types/domain.js';
 import { findByIdAndOwner, listByOwner, create, update } from './model.js';
+import { Buffer } from 'node:buffer';
 
 function notFound(): never {
   throw new AppError(404, 'DOCUMENT_NOT_FOUND', 'Document not found or inaccessible.');
@@ -47,7 +48,10 @@ export async function uploadDocument(
   const file = validateFile(input);
   const id = `document-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
   const storageKey = `${ownerId}/${id}.pdf`;
-  const stored = await savePrivateDocument(storageKey, typeof input.content === 'string' ? input.content : file.name);
+  const payload = typeof input.content === 'string' && input.content.startsWith('base64:')
+    ? Buffer.from(input.content.slice('base64:'.length), 'base64')
+    : file.name;
+  const stored = await savePrivateDocument(storageKey, payload);
   const timestamp = new Date().toISOString();
   const document: CaseDocument = {
     id, caseId, ownerId, originalName: file.name, pageCount: 15 + Math.floor(Math.random() * 31),

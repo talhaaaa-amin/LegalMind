@@ -675,14 +675,14 @@ export const apiClient = {
 
   async uploadDocument(
     caseId: string,
-    file: { name: string; size: number; type: string; simulateFailure?: boolean },
+    file: { name: string; size: number; type: string; content?: string; simulateFailure?: boolean },
   ): Promise<CaseDocument> {
     await wait();
     const remote = await documentRequest<{ document: CaseDocument; jobId: string }>(
       `/cases/${encodeURIComponent(caseId)}/documents`,
       {
         method: 'POST',
-        body: JSON.stringify({ name: file.name, size: file.size, type: file.type }),
+        body: JSON.stringify({ name: file.name, size: file.size, type: file.type, content: file.content }),
       },
     );
     if (remote) return clone(remote.document);

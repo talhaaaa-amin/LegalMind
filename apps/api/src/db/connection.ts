@@ -107,7 +107,21 @@ export async function connectStorage(): Promise<Repository> {
     console.warn('MongoDB unavailable; using persistent JSON storage.', error instanceof Error ? error.message : error);
   }
 
+  let workspaceCache: JsonWorkspace | undefined;
+  let loadPromise: Promise<JsonWorkspace> | undefined;
+  let writePromise: Promise<void> = Promise.resolve();
+
   async function readJson(): Promise<JsonWorkspace> {
+    if (workspaceCache) return clone(workspaceCache);
+    if (loadPromise) return clone(await loadPromise);
+
+    loadPromise = loadJsonFromDisk();
+    workspaceCache = await loadPromise;
+    loadPromise = undefined;
+    return clone(workspaceCache);
+  }
+
+  async function loadJsonFromDisk(): Promise<JsonWorkspace> {
     try {
       const parsed = JSON.parse(await fs.readFile(filePath, 'utf8')) as Partial<JsonWorkspace>;
       const workspace: JsonWorkspace = {
@@ -136,8 +150,9 @@ export async function connectStorage(): Promise<Repository> {
       await fs.writeFile(filePath, JSON.stringify(workspace, null, 2));
       return workspace;
     } catch {
-      await fs.writeFile(filePath, JSON.stringify(initialWorkspace, null, 2));
-      return clone(initialWorkspace);
+      const workspace = clone(initialWorkspace);
+      await fs.writeFile(filePath, JSON.stringify(workspace, null, 2));
+      return workspace;
     }
   }
 
@@ -145,7 +160,9 @@ export async function connectStorage(): Promise<Repository> {
     mode: 'json',
     read: readJson,
     async write(workspace) {
-      await fs.writeFile(filePath, JSON.stringify(workspace, null, 2));
+      workspaceCache = clone(workspace);
+      writePromise = writePromise.then(() => fs.writeFile(filePath, JSON.stringify(workspaceCache, null, 2)));
+      await writePromise;
     },
   };
 }

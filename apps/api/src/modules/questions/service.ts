@@ -29,13 +29,19 @@ export async function listQuestions(repository: Repository, ownerId: string, cas
   return (await list(repository, caseId, ownerId)).map((response) => availableResponse(response, workspace));
 }
 
-async function askRemote(question: string, documentIds: string[]) {
+async function askRemote(caseId: string, ownerId: string, question: string, documentIds: string[]) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 700);
   try {
     const response = await fetch(`${env.RAG_SERVICE_URL}/internal/answer`, {
       method: 'POST', headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ question, documentIds }), signal: controller.signal,
+      body: JSON.stringify({
+        caseId,
+        question,
+        documentIds,
+        scope: { ownerId },
+      }),
+      signal: controller.signal,
     });
     if (!response.ok) return null;
     return await response.json() as Partial<QuestionResponse>;
@@ -67,7 +73,7 @@ export async function askQuestion(repository: Repository, ownerId: string, caseI
   }
   const remote = input.simulateOutcome === 'fallback'
     ? null
-    : await askRemote(input.question.trim(), requestedIds);
+    : await askRemote(caseId, ownerId, input.question.trim(), requestedIds);
   const base = { id: `response-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, caseId, ownerId, question: input.question.trim(), retrievalConfigVersion: RETRIEVAL_CONFIG_VERSION, createdAt: new Date().toISOString() };
   let response: QuestionResponse;
   if (remote?.answer && Array.isArray(remote.citations)) {
@@ -79,22 +85,37 @@ export async function askQuestion(repository: Repository, ownerId: string, caseI
         item.id === candidate.chunkId ||
         (item.documentId === candidate.documentId && item.physicalPage === candidate.physicalPage));
       const document = chunk && readyDocuments.find((item) => item.id === chunk.documentId);
-      if (!chunk || !document) return null;
+      const remoteDocument = typeof candidate.documentId === 'string'
+        ? readyDocuments.find((item) => item.id === candidate.documentId)
+        : undefined;
+      const physicalPage = typeof candidate.physicalPage === 'number' ? candidate.physicalPage : undefined;
+      if ((!chunk && (!remoteDocument || physicalPage === undefined)) || (!document && !remoteDocument)) return null;
+      const resolvedDocument = document ?? remoteDocument;
+      if (!resolvedDocument) return null;
       return {
         sourceId: `S${index + 1}`,
-        documentId: document.id,
-        documentName: document.originalName,
-        version: document.activeVersion,
-        chunkId: chunk.id,
-        physicalPage: chunk.physicalPage,
-        excerpt: chunk.content,
+        documentId: resolvedDocument.id,
+        documentName: resolvedDocument.originalName,
+        version: resolvedDocument.activeVersion,
+        chunkId: chunk?.id ?? String(candidate.chunkId ?? `${resolvedDocument.id}-page-${physicalPage}`),
+        physicalPage: chunk?.physicalPage ?? physicalPage,
+        excerpt: chunk?.content ?? (typeof candidate.excerpt === 'string' ? candidate.excerpt : ''),
         isAvailable: true,
       };
     }).filter((citation): citation is NonNullable<typeof citation> => citation !== null);
     if (citations.length === 0) {
       return askQuestion(repository, ownerId, caseId, { ...input, simulateOutcome: 'fallback' });
     }
-    response = { ...base, status: remote.status === 'partial' ? 'partial' : 'answered', answer: remote.answer, citations, limitations: remote.limitations };
+    response = {
+      ...base,
+      status: remote.status === 'partial' ? 'partial' : remote.status === 'insufficient_evidence' ? 'insufficient_evidence' : 'answered',
+      answer: remote.answer,
+      citations,
+      limitations: remote.limitations,
+      retrievalConfigVersion: typeof remote.retrievalConfigVersion === 'string'
+        ? remote.retrievalConfigVersion
+        : base.retrievalConfigVersion,
+    };
   } else {
     const unrelated = /\b(unrelated|tax|criminal)\b/i.test(base.question);
     if (!eligible.length || unrelated || input.simulateOutcome === 'insufficient_evidence') {

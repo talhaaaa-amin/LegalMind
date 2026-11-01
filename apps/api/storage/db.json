@@ -4,18 +4,67 @@
       "id": "lawyer-1",
       "name": "Amelia Hart",
       "email": "amelia.hart@hartlaw.com",
-      "createdAt": "2024-01-15T09:00:00.000Z",
-      "passwordHash": "demo"
+      "passwordHash": "demo",
+      "createdAt": "2024-01-15T09:00:00.000Z"
     },
     {
       "id": "lawyer-2",
       "name": "Marcus Vance",
       "email": "marcus.vance@vancelaw.com",
-      "createdAt": "2024-03-10T09:00:00.000Z",
-      "passwordHash": "demo"
+      "passwordHash": "demo",
+      "createdAt": "2024-03-10T09:00:00.000Z"
     }
   ],
-  "sessions": [],
+  "sessions": [
+    {
+      "token": "db3654274c4197b193ef8ec588857b572efc2f2f864ee99466f0918922b228e1",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-10-31T18:23:17.651Z",
+      "expiresAt": "2026-11-07T18:23:17.651Z"
+    },
+    {
+      "token": "7ccac5d270fdc6138847ae0fb70dad8787a97e3084a666b3e233a639f5c34071",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-10-31T18:23:26.045Z",
+      "expiresAt": "2026-11-07T18:23:26.045Z"
+    },
+    {
+      "token": "c7cf72a42228efe7624f06228a65e70948f2e739760c97b2004d57d6c005ed1f",
+      "lawyerId": "lawyer-2",
+      "createdAt": "2026-10-31T18:24:32.295Z",
+      "expiresAt": "2026-11-07T18:24:32.295Z"
+    },
+    {
+      "token": "cebb1dc1770bb0d1ddb43b5c3a175419995dfa3a42a86995698233d783409a28",
+      "lawyerId": "lawyer-2",
+      "createdAt": "2026-10-31T18:26:41.511Z",
+      "expiresAt": "2026-11-07T18:26:41.511Z"
+    },
+    {
+      "token": "a02cd5a8c4ee9c64f9548d37ed59acb988a438696d679d6cfb71af3cf955ff39",
+      "lawyerId": "lawyer-2",
+      "createdAt": "2026-11-01T02:45:03.776Z",
+      "expiresAt": "2026-11-08T02:45:03.776Z"
+    },
+    {
+      "token": "dfe3834596a79049a49bc8b4d416e438a151a729ac2de6c0e2dbb37b56d413a0",
+      "lawyerId": "lawyer-2",
+      "createdAt": "2026-11-01T02:45:07.137Z",
+      "expiresAt": "2026-11-08T02:45:07.137Z"
+    },
+    {
+      "token": "0d28691f8d9b943c9dad546a223cff366ecb94e1ff3de459fec000b6aa0927e2",
+      "lawyerId": "lawyer-2",
+      "createdAt": "2026-11-01T02:45:10.192Z",
+      "expiresAt": "2026-11-08T02:45:10.192Z"
+    },
+    {
+      "token": "162a8f59f0c6d8084a46b14a0664b24c5a04758d9b4e3989991e310c68ad919a",
+      "lawyerId": "lawyer-2",
+      "createdAt": "2026-11-01T02:46:02.676Z",
+      "expiresAt": "2026-11-08T02:46:02.676Z"
+    }
+  ],
   "cases": [
     {
       "id": "case-1",
@@ -57,6 +106,16 @@
       "createdAt": "2025-01-12T11:00:00.000Z"
     },
     {
+      "id": "document-2",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "Notice of Delay.pdf",
+      "pageCount": 12,
+      "activeVersion": 1,
+      "status": "ready",
+      "createdAt": "2025-02-04T14:00:00.000Z"
+    },
+    {
       "id": "document-3",
       "caseId": "case-2",
       "ownerId": "lawyer-1",
@@ -64,6 +123,7 @@
       "pageCount": 31,
       "activeVersion": 1,
       "status": "failed",
+      "errorCode": "EXTRACTION_UNSUPPORTED_TABLE",
       "createdAt": "2025-02-01T09:30:00.000Z"
     },
     {
@@ -75,9 +135,386 @@
       "activeVersion": 1,
       "status": "ready",
       "createdAt": "2025-02-08T10:00:00.000Z"
+    },
+    {
+      "id": "document-1793471089144-trlogv",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "originalName": "legalmind-smoke.pdf",
+      "pageCount": 16,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-10-31T18:24:49.146Z",
+      "storageKey": "lawyer-2/document-1793471089144-trlogv.pdf",
+      "hash": "3890de897f19cc6c370570ecb528779c76798a09a6880a103ddaed902c571086",
+      "deletedAt": "2026-10-31T18:24:59.621Z"
+    },
+    {
+      "id": "document-1793471208067-djdety",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "originalName": "05-vance-purchase-agreement.pdf",
+      "pageCount": 41,
+      "activeVersion": 1,
+      "status": "ready",
+      "createdAt": "2026-10-31T18:26:48.070Z",
+      "storageKey": "lawyer-2/document-1793471208067-djdety.pdf",
+      "hash": "029bf538d438ed8975a948be1979f3020217e9cf87d3b2959eefc1de1ec783e5"
+    },
+    {
+      "id": "document-1793471295173-oi3sn7",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "originalName": "02-notice-of-delay.pdf",
+      "pageCount": 29,
+      "activeVersion": 1,
+      "status": "ready",
+      "createdAt": "2026-10-31T18:28:15.174Z",
+      "storageKey": "lawyer-2/document-1793471295173-oi3sn7.pdf",
+      "hash": "0cb1f44254ae1396d4fa3c1a9e5a0fab9f1aaecfa3290c1a3c8a821d78874338"
+    },
+    {
+      "id": "document-1793501162771-0eymrs",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "originalName": "06-vance-disclosure-schedule.pdf",
+      "pageCount": 40,
+      "activeVersion": 1,
+      "status": "ready",
+      "createdAt": "2026-11-01T02:46:02.773Z",
+      "storageKey": "lawyer-2/document-1793501162771-0eymrs.pdf",
+      "hash": "241e6e0894425710e1a5ff7f9e109da6d207fc02fc614ad45ed52466daa17cb2"
     }
   ],
-  "responses": [],
-  "savedAnswers": [],
-  "pageContents": {}
+  "responses": [
+    {
+      "id": "response-1",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period applies to a material delay?",
+      "status": "answered",
+      "answer": "The delayed party must provide written notice within ten business days [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-1",
+          "documentName": "Riverside Master Agreement.pdf",
+          "version": 2,
+          "chunkId": "chunk-042",
+          "physicalPage": 42,
+          "excerpt": "The delayed party shall provide written notice within ten (10) business days after discovering the delay.",
+          "isAvailable": true
+        }
+      ],
+      "retrievalConfigVersion": "rag-2025-01",
+      "createdAt": "2025-02-05T10:00:00.000Z"
+    },
+    {
+      "id": "response-2",
+      "caseId": "case-2",
+      "ownerId": "lawyer-1",
+      "question": "What notice is required before termination?",
+      "status": "partial",
+      "answer": "Termination requires written notice specifying the material breach [S2].",
+      "citations": [
+        {
+          "sourceId": "S2",
+          "documentId": "document-3",
+          "documentName": "Executive Employment Agreement.pdf",
+          "version": 1,
+          "chunkId": "chunk-018",
+          "physicalPage": 18,
+          "excerpt": "A termination notice must be delivered in writing and specify the material breach.",
+          "isAvailable": true
+        }
+      ],
+      "limitations": "The document is currently awaiting a successful extraction retry.",
+      "retrievalConfigVersion": "rag-2025-01",
+      "createdAt": "2025-02-06T10:00:00.000Z"
+    },
+    {
+      "id": "response-3",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "question": "What is the governing law?",
+      "status": "answered",
+      "answer": "The agreement is governed by Delaware law [S3].",
+      "citations": [
+        {
+          "sourceId": "S3",
+          "documentId": "document-4",
+          "documentName": "Vance Holdings Purchase Agreement.pdf",
+          "version": 1,
+          "chunkId": "chunk-055",
+          "physicalPage": 55,
+          "excerpt": "This agreement and any dispute arising from it are governed by the laws of the State of Delaware.",
+          "isAvailable": true
+        }
+      ],
+      "retrievalConfigVersion": "rag-2025-01",
+      "createdAt": "2025-02-07T10:00:00.000Z"
+    },
+    {
+      "id": "response-1793501165848-0w8nz",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "question": "What contracts are disclosed?",
+      "retrievalConfigVersion": "rag-python-v1",
+      "createdAt": "2026-11-01T02:46:05.848Z",
+      "status": "answered",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-1793501162771-0eymrs",
+          "documentName": "06-vance-disclosure-schedule.pdf",
+          "version": 1,
+          "chunkId": "chunk-document-1793501162771-0eymrs-1-0",
+          "physicalPage": 1,
+          "excerpt": "Vance Holdings Acquisition\nDisclosure Schedule\nThe seller discloses all material contracts, pending claims, and liabilities known as of the disclosure date.\nTest fixture for LegalMind PDF upload and indexing validation.",
+          "isAvailable": true
+        }
+      ],
+      "limitations": null
+    },
+    {
+      "id": "response-1793501110221-jpv53",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "question": "What is the affected milestone and anticipated impact?",
+      "retrievalConfigVersion": "lexical-v1",
+      "createdAt": "2026-11-01T02:45:10.221Z",
+      "status": "answered",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-1793471295173-oi3sn7",
+          "documentName": "02-notice-of-delay.pdf",
+          "version": 1,
+          "chunkId": "document-1793471295173-oi3sn7-page-fallback",
+          "physicalPage": 1,
+          "excerpt": "Page 1 of 02-notice-of-delay.pdf is ready for review.",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "response-1793501103828-wgygt",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "question": "What is the governing law?",
+      "retrievalConfigVersion": "rag-python-v1",
+      "createdAt": "2026-11-01T02:45:03.828Z",
+      "status": "answered",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-4",
+          "documentName": "Vance Holdings Purchase Agreement.pdf",
+          "version": 1,
+          "chunkId": "document-4-v1-p55-0",
+          "physicalPage": 55,
+          "excerpt": "This agreement and any dispute arising from it are governed by the laws of the State of Delaware, without regard to conflict-of-law principles.",
+          "isAvailable": true
+        },
+        {
+          "sourceId": "S2",
+          "documentId": "document-4",
+          "documentName": "Vance Holdings Purchase Agreement.pdf",
+          "version": 1,
+          "chunkId": "document-4-v1-p54-0",
+          "physicalPage": 54,
+          "excerpt": "The obligations to close are subject to satisfaction or waiver of the conditions listed in this article.",
+          "isAvailable": true
+        }
+      ],
+      "limitations": null
+    },
+    {
+      "id": "response-1793471051375-he39p",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period applies to a material delay?",
+      "retrievalConfigVersion": "lexical-v1",
+      "createdAt": "2026-10-31T18:24:11.375Z",
+      "status": "answered",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-2",
+          "documentName": "Notice of Delay.pdf",
+          "version": 1,
+          "chunkId": "document-2-page-fallback",
+          "physicalPage": 1,
+          "excerpt": "Page 1 of Notice of Delay.pdf is ready for review.",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "savedAnswers": [
+    {
+      "id": "saved-1793471061784-xa55w",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period applies to a material delay?",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-2",
+          "documentName": "Notice of Delay.pdf",
+          "version": 1,
+          "chunkId": "document-2-page-fallback",
+          "physicalPage": 1,
+          "excerpt": "Page 1 of Notice of Delay.pdf is ready for review.",
+          "isAvailable": true
+        }
+      ],
+      "createdAt": "2026-10-31T18:24:21.784Z"
+    }
+  ],
+  "pageContents": {
+    "document-1": {
+      "40": {
+        "sectionTitle": "Notice and Cure",
+        "content": "A party must provide written notice of a material delay and allow the contractual cure period before pursuing remedies."
+      },
+      "41": {
+        "sectionTitle": "Notice and Cure",
+        "content": "Notice must identify the affected milestone, the anticipated impact, and the action requested from the receiving party."
+      },
+      "42": {
+        "sectionTitle": "Delay Notice Requirements",
+        "content": "The delayed party shall provide written notice within ten (10) business days after discovering the delay. The notice must describe the cause, expected duration, and mitigation steps."
+      },
+      "43": {
+        "sectionTitle": "Remedies",
+        "content": "Failure to provide timely notice may limit recovery to losses that could not reasonably have been avoided."
+      }
+    },
+    "document-3": {
+      "17": {
+        "sectionTitle": "Termination",
+        "content": "Either party may terminate for material breach after written notice and an opportunity to cure."
+      },
+      "18": {
+        "sectionTitle": "Termination Notice",
+        "content": "A termination notice must be delivered in writing and specify the material breach relied upon by the terminating party."
+      },
+      "19": {
+        "sectionTitle": "Post-Termination Obligations",
+        "content": "Accrued payment obligations and confidentiality duties survive termination of this agreement."
+      }
+    },
+    "document-4": {
+      "54": {
+        "sectionTitle": "Closing Conditions",
+        "content": "The obligations to close are subject to satisfaction or waiver of the conditions listed in this article."
+      },
+      "55": {
+        "sectionTitle": "Governing Law",
+        "content": "This agreement and any dispute arising from it are governed by the laws of the State of Delaware, without regard to conflict-of-law principles."
+      },
+      "56": {
+        "sectionTitle": "Entire Agreement",
+        "content": "This agreement constitutes the entire agreement between the parties concerning the transaction."
+      }
+    }
+  },
+  "jobs": [
+    {
+      "id": "job-document-2",
+      "documentId": "document-2",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-10-31T18:21:57.528Z"
+    },
+    {
+      "id": "job-document-3",
+      "documentId": "document-3",
+      "version": 1,
+      "state": "failed",
+      "attemptCount": 1,
+      "errorCode": "EXTRACTION_UNSUPPORTED_TABLE",
+      "updatedAt": "2025-02-01T09:30:00.000Z"
+    },
+    {
+      "id": "job-document-1793471089144-trlogv",
+      "documentId": "document-1793471089144-trlogv",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-10-31T18:24:51.606Z"
+    },
+    {
+      "id": "job-document-1793471208067-djdety",
+      "documentId": "document-1793471208067-djdety",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-10-31T18:26:50.539Z"
+    },
+    {
+      "id": "job-document-1793471295173-oi3sn7",
+      "documentId": "document-1793471295173-oi3sn7",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-10-31T18:28:17.640Z"
+    },
+    {
+      "id": "job-document-1793501162771-0eymrs",
+      "documentId": "document-1793501162771-0eymrs",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T02:46:03.293Z"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "document-4-v1-p54-0",
+      "documentId": "document-4",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "version": 1,
+      "physicalPage": 54,
+      "sectionTitle": "Closing Conditions",
+      "content": "The obligations to close are subject to satisfaction or waiver of the conditions listed in this article.",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T02:45:03.829Z"
+    },
+    {
+      "id": "document-4-v1-p55-0",
+      "documentId": "document-4",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "version": 1,
+      "physicalPage": 55,
+      "sectionTitle": "Governing Law",
+      "content": "This agreement and any dispute arising from it are governed by the laws of the State of Delaware, without regard to conflict-of-law principles.",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T02:45:03.829Z"
+    },
+    {
+      "id": "document-4-v1-p56-0",
+      "documentId": "document-4",
+      "caseId": "case-3",
+      "ownerId": "lawyer-2",
+      "version": 1,
+      "physicalPage": 56,
+      "sectionTitle": "Entire Agreement",
+      "content": "This agreement constitutes the entire agreement between the parties concerning the transaction.",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T02:45:03.829Z"
+    }
+  ]
 }
