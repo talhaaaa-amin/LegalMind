@@ -35,34 +35,70 @@
       "expiresAt": "2026-11-07T18:24:32.295Z"
     },
     {
-      "token": "cebb1dc1770bb0d1ddb43b5c3a175419995dfa3a42a86995698233d783409a28",
+      "token": "38c30a99a4507e6e450bdbf975d723fdff4cb0066720f3a1f382cc42d37bb9ab",
       "lawyerId": "lawyer-2",
-      "createdAt": "2026-10-31T18:26:41.511Z",
-      "expiresAt": "2026-11-07T18:26:41.511Z"
+      "createdAt": "2026-11-01T02:55:12.063Z",
+      "expiresAt": "2026-11-08T02:55:12.063Z"
     },
     {
-      "token": "a02cd5a8c4ee9c64f9548d37ed59acb988a438696d679d6cfb71af3cf955ff39",
-      "lawyerId": "lawyer-2",
-      "createdAt": "2026-11-01T02:45:03.776Z",
-      "expiresAt": "2026-11-08T02:45:03.776Z"
+      "token": "55541531ec003de11de93d154f8154d2c0d2534ed8aa52c0fa4e44b1cc89280a",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T02:55:39.836Z",
+      "expiresAt": "2026-11-08T02:55:39.836Z"
     },
     {
-      "token": "dfe3834596a79049a49bc8b4d416e438a151a729ac2de6c0e2dbb37b56d413a0",
-      "lawyerId": "lawyer-2",
-      "createdAt": "2026-11-01T02:45:07.137Z",
-      "expiresAt": "2026-11-08T02:45:07.137Z"
+      "token": "6cfc7728d1a765d8b881c8258e985ec5b2635d8ab541f1ac549b2fa80f93e897",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T03:17:53.320Z",
+      "expiresAt": "2026-11-08T03:17:53.320Z"
     },
     {
-      "token": "0d28691f8d9b943c9dad546a223cff366ecb94e1ff3de459fec000b6aa0927e2",
-      "lawyerId": "lawyer-2",
-      "createdAt": "2026-11-01T02:45:10.192Z",
-      "expiresAt": "2026-11-08T02:45:10.192Z"
+      "token": "2aca18119fe30057ae7f2f0d3c40d3559c6824fd2d05e34f9035b311aedcca35",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T03:18:05.315Z",
+      "expiresAt": "2026-11-08T03:18:05.315Z"
     },
     {
-      "token": "162a8f59f0c6d8084a46b14a0664b24c5a04758d9b4e3989991e310c68ad919a",
+      "token": "9bfbe07146b474383193ac172cf3c31ec6e342951f772fc59c12d827cdfe7ccd",
       "lawyerId": "lawyer-2",
-      "createdAt": "2026-11-01T02:46:02.676Z",
-      "expiresAt": "2026-11-08T02:46:02.676Z"
+      "createdAt": "2026-11-01T03:19:02.176Z",
+      "expiresAt": "2026-11-08T03:19:02.176Z"
+    },
+    {
+      "token": "43ddb6514281d1e12a228e277f4e764253fe8ebb5c103ed6ad42fbb5d6cfd0d5",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T03:26:09.604Z",
+      "expiresAt": "2026-11-08T03:26:09.604Z"
+    },
+    {
+      "token": "44ac4c19f999f74612264df5c17ef393d033e79c668ddbbeb3acab785e7eeb7a",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T03:28:34.278Z",
+      "expiresAt": "2026-11-08T03:28:34.278Z"
+    },
+    {
+      "token": "abf6c11b64c9a27ef0d238a8c6b3fba5845d65611a3a0e368556fb0b4e9bbc92",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T03:28:41.425Z",
+      "expiresAt": "2026-11-08T03:28:41.425Z"
+    },
+    {
+      "token": "d0975f500c7fabe4cbd54eb9113f04ccdf00e437359f34e0342c1dcb02b7837a",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T03:28:58.690Z",
+      "expiresAt": "2026-11-08T03:28:58.690Z"
+    },
+    {
+      "token": "c9d8a1845d1e0b5758c275f6176c57d96f88d229c0b8ee2b40d6cc3bdb310ce8",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T03:29:52.719Z",
+      "expiresAt": "2026-11-08T03:29:52.719Z"
+    },
+    {
+      "token": "ef30352196fbe4c6bae13e54a3015a769598b07da200d8d9fed3a8d4f949cf1d",
+      "lawyerId": "lawyer-1",
+      "createdAt": "2026-11-01T03:30:04.028Z",
+      "expiresAt": "2026-11-08T03:30:04.028Z"
     }
   ],
   "cases": [
@@ -102,8 +138,9 @@
       "originalName": "Riverside Master Agreement.pdf",
       "pageCount": 84,
       "activeVersion": 2,
-      "status": "ready",
-      "createdAt": "2025-01-12T11:00:00.000Z"
+      "status": "deleting",
+      "createdAt": "2025-01-12T11:00:00.000Z",
+      "deletedAt": "2026-11-01T07:54:21.364Z"
     },
     {
       "id": "document-2",
@@ -112,8 +149,9 @@
       "originalName": "Notice of Delay.pdf",
       "pageCount": 12,
       "activeVersion": 1,
-      "status": "ready",
-      "createdAt": "2025-02-04T14:00:00.000Z"
+      "status": "deleting",
+      "createdAt": "2025-02-04T14:00:00.000Z",
+      "deletedAt": "2026-11-01T07:54:18.880Z"
     },
     {
       "id": "document-3",
@@ -122,8 +160,7 @@
       "originalName": "Executive Employment Agreement.pdf",
       "pageCount": 31,
       "activeVersion": 1,
-      "status": "failed",
-      "errorCode": "EXTRACTION_UNSUPPORTED_TABLE",
+      "status": "ready",
       "createdAt": "2025-02-01T09:30:00.000Z"
     },
     {
@@ -174,19 +211,169 @@
       "hash": "0cb1f44254ae1396d4fa3c1a9e5a0fab9f1aaecfa3290c1a3c8a821d78874338"
     },
     {
-      "id": "document-1793501162771-0eymrs",
-      "caseId": "case-3",
-      "ownerId": "lawyer-2",
-      "originalName": "06-vance-disclosure-schedule.pdf",
-      "pageCount": 40,
+      "id": "document-1793501764506-071u9z",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "01-riverside-master-agreement.pdf",
+      "pageCount": 37,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T02:56:04.508Z",
+      "storageKey": "lawyer-1/document-1793501764506-071u9z.pdf",
+      "hash": "eda2264ce049e34a41557b79291e0065adb151ce2d3d277e2cbefa39e0fbfc84",
+      "deletedAt": "2026-11-01T07:54:23.817Z"
+    },
+    {
+      "id": "document-1793502892967-f8nwu6",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "01-riverside-master-agreement.pdf",
+      "pageCount": 21,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T03:14:52.968Z",
+      "storageKey": "lawyer-1/document-1793502892967-f8nwu6.pdf",
+      "hash": "49309d60740effeaa8811d4c6b8fbf87d6d71b9449eb1ba06503abf4ee99e2ca",
+      "deletedAt": "2026-11-01T07:54:16.988Z"
+    },
+    {
+      "id": "document-1793503101613-tpzhaa",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "02-notice-of-delay.pdf",
+      "pageCount": 18,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T03:18:21.618Z",
+      "storageKey": "lawyer-1/document-1793503101613-tpzhaa.pdf",
+      "hash": "84ca87975894fa55d1f8267c38a11f70d4af653959a31e882175d2c086a015a3",
+      "deletedAt": "2026-11-01T07:54:25.889Z"
+    },
+    {
+      "id": "document-1793503251624-vzfe68",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "riverside-development-dispute-50-page-record.pdf",
+      "pageCount": 37,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T03:20:51.631Z",
+      "storageKey": "lawyer-1/document-1793503251624-vzfe68.pdf",
+      "hash": "77809da0db5c2f70d2d0b0c179f05e6eede5784b2c29ce4574b415795c29d737",
+      "deletedAt": "2026-11-01T07:54:14.842Z"
+    },
+    {
+      "id": "document-1793503569678-17h1ek",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "riverside-development-dispute-50-page-record-real.pdf",
+      "pageCount": 35,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T03:26:09.683Z",
+      "storageKey": "lawyer-1/document-1793503569678-17h1ek.pdf",
+      "hash": "284b3f501e645605674cf1a568ab1a4f372f03ad61d0c43a7ccd5fac085d9c04",
+      "deletedAt": "2026-11-01T07:54:11.917Z"
+    },
+    {
+      "id": "document-1793503703900-g73b3f",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "riverside-development-dispute-50-page-record.pdf",
+      "pageCount": 23,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T03:28:23.902Z",
+      "storageKey": "lawyer-1/document-1793503703900-g73b3f.pdf",
+      "hash": "284b3f501e645605674cf1a568ab1a4f372f03ad61d0c43a7ccd5fac085d9c04",
+      "deletedAt": "2026-11-01T07:54:27.841Z"
+    },
+    {
+      "id": "document-1793503738783-f2dwyz",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "Riverside-Development-Dispute-50-Page-Real-Case.pdf",
+      "pageCount": 50,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T03:28:58.786Z",
+      "storageKey": "lawyer-1/document-1793503738783-f2dwyz.pdf",
+      "hash": "284b3f501e645605674cf1a568ab1a4f372f03ad61d0c43a7ccd5fac085d9c04",
+      "deletedAt": "2026-11-01T07:54:09.738Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "Riverside-Case-50-pages-extracted.pdf",
+      "pageCount": 50,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T03:29:52.801Z",
+      "storageKey": "lawyer-1/document-1793503792799-s1rsxb.pdf",
+      "hash": "284b3f501e645605674cf1a568ab1a4f372f03ad61d0c43a7ccd5fac085d9c04",
+      "deletedAt": "2026-11-01T07:54:30.534Z"
+    },
+    {
+      "id": "document-1793519673788-a87y0e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "01-riverside-master-agreement.pdf",
+      "pageCount": 1,
+      "activeVersion": 1,
+      "status": "deleting",
+      "createdAt": "2026-11-01T07:54:33.791Z",
+      "storageKey": "lawyer-1/document-1793519673788-a87y0e.pdf",
+      "hash": "49309d60740effeaa8811d4c6b8fbf87d6d71b9449eb1ba06503abf4ee99e2ca",
+      "deletedAt": "2026-11-01T07:54:49.383Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "originalName": "riverside-development-dispute-50-page-record.pdf",
+      "pageCount": 50,
       "activeVersion": 1,
       "status": "ready",
-      "createdAt": "2026-11-01T02:46:02.773Z",
-      "storageKey": "lawyer-2/document-1793501162771-0eymrs.pdf",
-      "hash": "241e6e0894425710e1a5ff7f9e109da6d207fc02fc614ad45ed52466daa17cb2"
+      "createdAt": "2026-11-01T07:54:52.984Z",
+      "storageKey": "lawyer-1/document-1793519692982-3ikz4e.pdf",
+      "hash": "284b3f501e645605674cf1a568ab1a4f372f03ad61d0c43a7ccd5fac085d9c04"
     }
   ],
   "responses": [
+    {
+      "id": "response-1793519717929-g4f3g",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period is required before termination?",
+      "retrievalConfigVersion": "rag-python-v1",
+      "createdAt": "2026-11-01T07:55:17.929Z",
+      "status": "answered",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-1793519692982-3ikz4e",
+          "documentName": "riverside-development-dispute-50-page-record.pdf",
+          "version": 1,
+          "chunkId": "document-1793519692982-3ikz4e-v1-p48-0",
+          "physicalPage": 48,
+          "excerpt": "ARTICLE 22 - TERMINATION Riverside may terminate for uncured material breach after written notice and expiration of the applicable cure period. Immediate termination is permitted for insolvency, abandonment, repeated safety violations, or failure to maintain required insurance, subject to the agreement. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 48 OF 50",
+          "isAvailable": true
+        },
+        {
+          "sourceId": "S2",
+          "documentId": "document-1793519692982-3ikz4e",
+          "documentName": "riverside-development-dispute-50-page-record.pdf",
+          "version": 1,
+          "chunkId": "document-1793519692982-3ikz4e-v1-p50-0",
+          "physicalPage": 50,
+          "excerpt": "COUNSEL REVIEW CHECKLIST Confirm notice dates and contractual deadlines. Reconcile the critical-path analysis with daily reports. Obtain executed change-order signatures. Verify insurance endorsements and lien waivers. Evaluate cure compliance, termination prerequisites, and New York governing-law implications before advising on next steps. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 50 OF 50",
+          "isAvailable": true
+        }
+      ],
+      "limitations": null
+    },
     {
       "id": "response-1",
       "caseId": "case-1",
@@ -203,7 +390,7 @@
           "chunkId": "chunk-042",
           "physicalPage": 42,
           "excerpt": "The delayed party shall provide written notice within ten (10) business days after discovering the delay.",
-          "isAvailable": true
+          "isAvailable": false
         }
       ],
       "retrievalConfigVersion": "rag-2025-01",
@@ -255,82 +442,90 @@
       "createdAt": "2025-02-07T10:00:00.000Z"
     },
     {
-      "id": "response-1793501165848-0w8nz",
-      "caseId": "case-3",
-      "ownerId": "lawyer-2",
-      "question": "What contracts are disclosed?",
-      "retrievalConfigVersion": "rag-python-v1",
-      "createdAt": "2026-11-01T02:46:05.848Z",
-      "status": "answered",
-      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
-      "citations": [
-        {
-          "sourceId": "S1",
-          "documentId": "document-1793501162771-0eymrs",
-          "documentName": "06-vance-disclosure-schedule.pdf",
-          "version": 1,
-          "chunkId": "chunk-document-1793501162771-0eymrs-1-0",
-          "physicalPage": 1,
-          "excerpt": "Vance Holdings Acquisition\nDisclosure Schedule\nThe seller discloses all material contracts, pending claims, and liabilities known as of the disclosure date.\nTest fixture for LegalMind PDF upload and indexing validation.",
-          "isAvailable": true
-        }
-      ],
-      "limitations": null
-    },
-    {
-      "id": "response-1793501110221-jpv53",
-      "caseId": "case-3",
-      "ownerId": "lawyer-2",
-      "question": "What is the affected milestone and anticipated impact?",
+      "id": "response-1793503123178-d6dyl",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period is required before termination?",
       "retrievalConfigVersion": "lexical-v1",
-      "createdAt": "2026-11-01T02:45:10.221Z",
+      "createdAt": "2026-11-01T03:18:43.178Z",
       "status": "answered",
       "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
       "citations": [
         {
           "sourceId": "S1",
-          "documentId": "document-1793471295173-oi3sn7",
-          "documentName": "02-notice-of-delay.pdf",
+          "documentId": "document-2",
+          "documentName": "Notice of Delay.pdf",
           "version": 1,
-          "chunkId": "document-1793471295173-oi3sn7-page-fallback",
+          "chunkId": "document-2-page-fallback",
           "physicalPage": 1,
-          "excerpt": "Page 1 of 02-notice-of-delay.pdf is ready for review.",
-          "isAvailable": true
+          "excerpt": "Page 1 of Notice of Delay.pdf is ready for review.",
+          "isAvailable": false
+        },
+        {
+          "sourceId": "S2",
+          "documentId": "document-1793501764506-071u9z",
+          "documentName": "01-riverside-master-agreement.pdf",
+          "version": 1,
+          "chunkId": "document-1793501764506-071u9z-page-fallback",
+          "physicalPage": 1,
+          "excerpt": "Page 1 of 01-riverside-master-agreement.pdf is ready for review.",
+          "isAvailable": false
         }
       ]
     },
     {
-      "id": "response-1793501103828-wgygt",
-      "caseId": "case-3",
-      "ownerId": "lawyer-2",
-      "question": "What is the governing law?",
-      "retrievalConfigVersion": "rag-python-v1",
-      "createdAt": "2026-11-01T02:45:03.828Z",
+      "id": "response-1793502918900-ufgif",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "Compare payment obligations with invoice records",
+      "retrievalConfigVersion": "lexical-v1",
+      "createdAt": "2026-11-01T03:15:18.900Z",
       "status": "answered",
       "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
       "citations": [
         {
           "sourceId": "S1",
-          "documentId": "document-4",
-          "documentName": "Vance Holdings Purchase Agreement.pdf",
+          "documentId": "document-2",
+          "documentName": "Notice of Delay.pdf",
           "version": 1,
-          "chunkId": "document-4-v1-p55-0",
-          "physicalPage": 55,
-          "excerpt": "This agreement and any dispute arising from it are governed by the laws of the State of Delaware, without regard to conflict-of-law principles.",
-          "isAvailable": true
+          "chunkId": "document-2-page-fallback",
+          "physicalPage": 1,
+          "excerpt": "Page 1 of Notice of Delay.pdf is ready for review.",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "response-1793502906729-ppmzu",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period is required before termination?",
+      "retrievalConfigVersion": "lexical-v1",
+      "createdAt": "2026-11-01T03:15:06.729Z",
+      "status": "answered",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-1",
+          "documentName": "Riverside Master Agreement.pdf",
+          "version": 2,
+          "chunkId": "document-1-v2-p40-0",
+          "physicalPage": 40,
+          "excerpt": "A party must provide written notice of a material delay and allow the contractual cure period before pursuing remedies.",
+          "isAvailable": false
         },
         {
           "sourceId": "S2",
-          "documentId": "document-4",
-          "documentName": "Vance Holdings Purchase Agreement.pdf",
-          "version": 1,
-          "chunkId": "document-4-v1-p54-0",
-          "physicalPage": 54,
-          "excerpt": "The obligations to close are subject to satisfaction or waiver of the conditions listed in this article.",
-          "isAvailable": true
+          "documentId": "document-1",
+          "documentName": "Riverside Master Agreement.pdf",
+          "version": 2,
+          "chunkId": "document-1-v2-p41-0",
+          "physicalPage": 41,
+          "excerpt": "Notice must identify the affected milestone, the anticipated impact, and the action requested from the receiving party.",
+          "isAvailable": false
         }
-      ],
-      "limitations": null
+      ]
     },
     {
       "id": "response-1793471051375-he39p",
@@ -350,7 +545,7 @@
           "chunkId": "document-2-page-fallback",
           "physicalPage": 1,
           "excerpt": "Page 1 of Notice of Delay.pdf is ready for review.",
-          "isAvailable": true
+          "isAvailable": false
         }
       ]
     }
@@ -371,10 +566,60 @@
           "chunkId": "document-2-page-fallback",
           "physicalPage": 1,
           "excerpt": "Page 1 of Notice of Delay.pdf is ready for review.",
-          "isAvailable": true
+          "isAvailable": false
         }
       ],
       "createdAt": "2026-10-31T18:24:21.784Z"
+    },
+    {
+      "id": "saved-1793503130750-qzc3h",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period is required before termination?",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-2",
+          "documentName": "Notice of Delay.pdf",
+          "version": 1,
+          "chunkId": "document-2-page-fallback",
+          "physicalPage": 1,
+          "excerpt": "Page 1 of Notice of Delay.pdf is ready for review.",
+          "isAvailable": false
+        },
+        {
+          "sourceId": "S2",
+          "documentId": "document-1793501764506-071u9z",
+          "documentName": "01-riverside-master-agreement.pdf",
+          "version": 1,
+          "chunkId": "document-1793501764506-071u9z-page-fallback",
+          "physicalPage": 1,
+          "excerpt": "Page 1 of 01-riverside-master-agreement.pdf is ready for review.",
+          "isAvailable": false
+        }
+      ],
+      "createdAt": "2026-11-01T03:18:50.750Z"
+    },
+    {
+      "id": "saved-1793519745932-dqh1e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period applies to a material delay?",
+      "answer": "The delayed party must provide written notice within ten business days [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-1",
+          "documentName": "Riverside Master Agreement.pdf",
+          "version": 2,
+          "chunkId": "chunk-042",
+          "physicalPage": 42,
+          "excerpt": "The delayed party shall provide written notice within ten (10) business days after discovering the delay.",
+          "isAvailable": true
+        }
+      ],
+      "createdAt": "2026-11-01T07:55:45.932Z"
     }
   ],
   "pageContents": {
@@ -423,6 +668,416 @@
         "sectionTitle": "Entire Agreement",
         "content": "This agreement constitutes the entire agreement between the parties concerning the transaction."
       }
+    },
+    "document-1793503792799-s1rsxb": {
+      "1": {
+        "sectionTitle": "CASE COVER AND PARTIES",
+        "content": "CASE COVER AND PARTIES\nRiverside Development LLC v. Harbor Construction Partners, Inc. Confidential case record prepared for counsel review. The dispute concerns a mixed-use redevelopment project at 114 Riverside Avenue, New York. Riverside is the owner and Harbor is the general contractor.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 1 OF 50"
+      },
+      "2": {
+        "sectionTitle": "EXECUTIVE SUMMARY",
+        "content": "EXECUTIVE SUMMARY\nRiverside alleges that Harbor missed contractual milestones, submitted unsupported payment applications, and failed to correct defective waterproofing. Harbor denies material breach and contends that owner-directed design changes, permit delays, and late site access excused the schedule impact.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 2 OF 50"
+      },
+      "3": {
+        "sectionTitle": "PARTIES AND REPRESENTATIVES",
+        "content": "PARTIES AND REPRESENTATIVES\nPlaintiff/Owner: Riverside Development LLC, represented by Northstar Legal Group. Defendant/Contractor: Harbor Construction Partners, Inc., represented by Vance & Cole LLP. Architect: Meridian Studio Architects. Lender: Hudson Commercial Bank.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 3 OF 50"
+      },
+      "4": {
+        "sectionTitle": "PROJECT DESCRIPTION",
+        "content": "PROJECT DESCRIPTION\nThe project is a twelve-story mixed-use building with 184 residential units, ground-floor retail, two levels of below-grade parking, and a public riverwalk. The contract price is $48,600,000, subject to approved change orders.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 4 OF 50"
+      },
+      "5": {
+        "sectionTitle": "CONTRACT FORMATION",
+        "content": "CONTRACT FORMATION\nThe parties executed the Master Construction Agreement on January 18, 2024. The agreement incorporates the plans, specifications, general conditions, schedule of values, and the dispute-resolution exhibit. The planned substantial-completion date was June 30, 2025.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 5 OF 50"
+      },
+      "6": {
+        "sectionTitle": "SCHEDULE BASELINE",
+        "content": "SCHEDULE BASELINE\nThe baseline schedule identifies excavation, foundation, structural frame, enclosure, mechanical rough-in, finishes, testing, and turnover as critical activities. Harbor was required to update the schedule monthly and identify activities that threatened substantial completion.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 6 OF 50"
+      },
+      "7": {
+        "sectionTitle": "ARTICLE 3 - NOTICE OF DELAY",
+        "content": "ARTICLE 3 - NOTICE OF DELAY\nA party discovering a material delay shall provide written notice within ten business days. The notice must identify the affected milestone, expected impact, and mitigation steps. Failure to provide timely notice may limit recovery for delay damages.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 7 OF 50"
+      },
+      "8": {
+        "sectionTitle": "SITE ACCESS AND CONDITIONS",
+        "content": "SITE ACCESS AND CONDITIONS\nRiverside delivered the initial site on February 1, 2024. Harbor reported undocumented utility lines on February 12. The parties agreed that investigation would proceed without stopping unaffected work, while responsibility for verified owner-caused conditions remained reserved.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 8 OF 50"
+      },
+      "9": {
+        "sectionTitle": "PERMIT HISTORY",
+        "content": "PERMIT HISTORY\nThe foundation permit issued February 26, 2024. The Department of Buildings issued comments on the facade package in May. Meridian submitted a revised package on June 4, and the facade permit was issued July 9, 2024.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 9 OF 50"
+      },
+      "10": {
+        "sectionTitle": "DESIGN DOCUMENTS",
+        "content": "DESIGN DOCUMENTS\nThe issued-for-construction drawings dated January 10, 2024 govern unless modified by a signed change order or written architect instruction. Harbor was required to review dimensions and promptly report inconsistencies discovered during coordination.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 10 OF 50"
+      },
+      "11": {
+        "sectionTitle": "DEFAULT NOTICE",
+        "content": "DEFAULT NOTICE\nOn November 14, 2024, Riverside issued a preliminary notice identifying schedule slippage, incomplete submittals, and deficient waterproofing. The notice requested a recovery schedule within seven days and reserved all contractual remedies.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 11 OF 50"
+      },
+      "12": {
+        "sectionTitle": "ARTICLE 5 - CURE PERIOD",
+        "content": "ARTICLE 5 - CURE PERIOD\nThe receiving party has thirty calendar days after valid notice to cure a material breach, unless an emergency threatens immediate and irreparable harm. A cure plan must state responsible personnel, corrective work, and the date by which compliance will be achieved.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 12 OF 50"
+      },
+      "13": {
+        "sectionTitle": "HARBOR RESPONSE",
+        "content": "HARBOR RESPONSE\nHarbor responded on November 21, 2024, disputing the characterization of delay and attributing six weeks to owner revisions. Harbor proposed extended shifts, additional waterproofing crews, and weekly executive meetings.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 13 OF 50"
+      },
+      "14": {
+        "sectionTitle": "RECOVERY SCHEDULE",
+        "content": "RECOVERY SCHEDULE\nThe recovery schedule moved interior framing to parallel work fronts and added Saturday shifts. The schedule forecast substantial completion on August 15, 2025, subject to timely release of the elevator shop drawings and final facade approvals.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 14 OF 50"
+      },
+      "15": {
+        "sectionTitle": "MEETING MINUTES",
+        "content": "MEETING MINUTES\nThe December 3 coordination meeting recorded open issues for facade anchors, elevator dimensions, fire-stopping details, and roof drains. Meridian directed Harbor to submit a consolidated request for information log within five business days.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 15 OF 50"
+      },
+      "16": {
+        "sectionTitle": "ARTICLE 16 - INSURANCE",
+        "content": "ARTICLE 16 - INSURANCE\nHarbor shall maintain commercial general liability, workers compensation, automobile liability, and builder risk coverage. Certificates must name Riverside and the lender as additional insureds where required, and cancellation notices must be provided before coverage terminates.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 16 OF 50"
+      },
+      "17": {
+        "sectionTitle": "INSURANCE CERTIFICATES",
+        "content": "INSURANCE CERTIFICATES\nThe certificate dated January 30, 2024 listed $2,000,000 per occurrence general liability and $5,000,000 umbrella coverage. Riverside requested an endorsement showing completed-operations coverage; Harbor supplied the endorsement on March 6.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 17 OF 50"
+      },
+      "18": {
+        "sectionTitle": "ARTICLE 8 - PAYMENT OBLIGATIONS",
+        "content": "ARTICLE 8 - PAYMENT OBLIGATIONS\nRiverside must pay an approved payment application within twenty-five days after receipt of the architect certification. Harbor must support each application with conditional waivers, updated schedule information, stored-material evidence, and a current schedule of values.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 18 OF 50"
+      },
+      "19": {
+        "sectionTitle": "PAYMENT APPLICATION 09",
+        "content": "PAYMENT APPLICATION 09\nApplication 09 requested $3,240,000 gross, less retainage and prior payments. Meridian certified $2,610,000 after excluding unsupported stored materials and work not conforming to the inspection log. Riverside paid the certified amount.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 19 OF 50"
+      },
+      "20": {
+        "sectionTitle": "PAYMENT DISPUTE",
+        "content": "PAYMENT DISPUTE\nHarbor claimed the withheld amount was an improper setoff. Riverside responded that the contract permits withholding for defective work and incomplete substantiation, provided the owner gives written reasons and releases undisputed amounts.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 20 OF 50"
+      },
+      "21": {
+        "sectionTitle": "WATERPROOFING OBSERVATIONS",
+        "content": "WATERPROOFING OBSERVATIONS\nInspection reports dated October 8 and October 22 identified membrane holidays, inadequate laps, and unsealed penetrations at the parking garage north wall. Harbor was directed to expose representative areas and submit a repair method.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 21 OF 50"
+      },
+      "22": {
+        "sectionTitle": "REMEDIATION PLAN",
+        "content": "REMEDIATION PLAN\nHarbor proposed removing affected membrane, drying the substrate, applying primer, installing replacement membrane, and performing a flood test. Meridian approved the method subject to photographic records and a twenty-four-hour test period.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 22 OF 50"
+      },
+      "23": {
+        "sectionTitle": "QUALITY CONTROL",
+        "content": "QUALITY CONTROL\nThe quality-control log records remedial work at grid lines N-4 through N-9. A December 19 test passed at the north wall, but a January 7 retest failed at one penetration. Harbor reopened the area and completed a second repair.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 23 OF 50"
+      },
+      "24": {
+        "sectionTitle": "ARTICLE 10 - CHANGE ORDERS",
+        "content": "ARTICLE 10 - CHANGE ORDERS\nNo change in contract sum or time is enforceable as a change order unless documented in a written instrument signed by Riverside and Harbor. Emergency direction may proceed to protect life or property, but pricing and time must be submitted promptly.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 24 OF 50"
+      },
+      "25": {
+        "sectionTitle": "CHANGE ORDER 04",
+        "content": "CHANGE ORDER 04\nChange Order 04 adds $186,400 for revised retail storefront mullions and grants fourteen calendar days. It was signed by both parties on August 16, 2024, and incorporated into the next schedule update.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 25 OF 50"
+      },
+      "26": {
+        "sectionTitle": "CHANGE DIRECTIVES",
+        "content": "CHANGE DIRECTIVES\nThree architect directives addressed fire-rated shaft walls and corridor ceiling access panels. Harbor priced the work but proceeded before signatures. Riverside maintains that only the signed directive for shaft walls qualifies for additional compensation.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 26 OF 50"
+      },
+      "27": {
+        "sectionTitle": "OWNER-CAUSED DELAYS",
+        "content": "OWNER-CAUSED DELAYS\nThe record supports a nine-day delay associated with late selection of lobby stone. Harbor did not segregate that delay from concurrent facade and procurement delays, making the claimed forty-two-day extension difficult to verify.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 27 OF 50"
+      },
+      "28": {
+        "sectionTitle": "CONTRACTOR-CAUSED DELAYS",
+        "content": "CONTRACTOR-CAUSED DELAYS\nThe critical-path report identifies late elevator submittals, insufficient framing labor, and repeated waterproofing repairs as contractor-responsible impacts. Harbor disputes causation and points to late design clarifications.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 28 OF 50"
+      },
+      "29": {
+        "sectionTitle": "CONCURRENT DELAY ANALYSIS",
+        "content": "CONCURRENT DELAY ANALYSIS\nThe schedule expert concludes that owner and contractor delays overlapped from October 2 through October 11, 2024. The report recommends no compensable delay damages for that period but allows evaluation of non-overlapping impacts.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 29 OF 50"
+      },
+      "30": {
+        "sectionTitle": "DAMAGES OVERVIEW",
+        "content": "DAMAGES OVERVIEW\nRiverside claims liquidated damages, consultant fees, temporary security, and carrying costs. Harbor claims unpaid change work, extended general conditions, and acceleration costs. Both parties reserve rights concerning consequential damages under the contract limitation.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 30 OF 50"
+      },
+      "31": {
+        "sectionTitle": "ARTICLE 13 - INDEMNIFICATION",
+        "content": "ARTICLE 13 - INDEMNIFICATION\nHarbor shall defend and indemnify Riverside from claims arising out of Harbor operations to the extent caused by Harbor or its subcontractors. The obligation does not require indemnity for Riverside's sole negligence or intentional misconduct.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 31 OF 50"
+      },
+      "32": {
+        "sectionTitle": "THIRD-PARTY CLAIM",
+        "content": "THIRD-PARTY CLAIM\nA neighboring owner alleged vibration damage during excavation. Harbor notified its carrier and retained a geotechnical consultant. The claim was resolved without admission for $92,000, with the parties disputing allocation of the settlement and defense costs.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 32 OF 50"
+      },
+      "33": {
+        "sectionTitle": "SUBCONTRACTOR ISSUES",
+        "content": "SUBCONTRACTOR ISSUES\nMetro Waterproofing submitted a notice of nonpayment and threatened demobilization. Harbor provided a payment ledger showing disputed backcharges. Riverside requested proof of payment and conditional lien waivers before releasing the next progress payment.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 33 OF 50"
+      },
+      "34": {
+        "sectionTitle": "LIENS AND WAIVERS",
+        "content": "LIENS AND WAIVERS\nA preliminary lien notice was received from Metro Waterproofing on February 2, 2025. Harbor obtained a release through January 31 but had not secured a final release for February work when Application 12 was submitted.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 34 OF 50"
+      },
+      "35": {
+        "sectionTitle": "SAFETY RECORD",
+        "content": "SAFETY RECORD\nThe project recorded two OSHA-reportable incidents involving subcontractor employees. The safety consultant found no willful violation but required a revised fall-protection plan, daily toolbox talks, and documented corrective-action reviews.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 35 OF 50"
+      },
+      "36": {
+        "sectionTitle": "ENVIRONMENTAL CONDITIONS",
+        "content": "ENVIRONMENTAL CONDITIONS\nTesting identified petroleum-impacted soil near the former loading area. The environmental consultant recommended segregated excavation and disposal at a licensed facility. The parties treated the work as a potential allowance item pending laboratory confirmation.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 36 OF 50"
+      },
+      "37": {
+        "sectionTitle": "ARTICLE 16 - INSURANCE CLAIM",
+        "content": "ARTICLE 16 - INSURANCE CLAIM\nThe builder-risk policy covers direct physical loss caused by a covered peril, subject to exclusions and deductible. Riverside notified the carrier after a storm damaged temporary roof protection. The carrier accepted coverage for emergency drying but reserved rights on consequential delay.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 37 OF 50"
+      },
+      "38": {
+        "sectionTitle": "STORM EVENT",
+        "content": "STORM EVENT\nA severe storm on March 18, 2025 caused water intrusion at the east stair core. Harbor installed temporary protection within twenty-four hours. Meridian's inspection found damage to gypsum board and insulation, with no structural damage.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 38 OF 50"
+      },
+      "39": {
+        "sectionTitle": "TESTING AND COMMISSIONING",
+        "content": "TESTING AND COMMISSIONING\nThe commissioning plan requires functional testing for HVAC, life safety, elevators, domestic water, and emergency power. Each system must have a signed test report, deficiency list, and closeout date before substantial completion.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 39 OF 50"
+      },
+      "40": {
+        "sectionTitle": "SUBSTANTIAL COMPLETION",
+        "content": "SUBSTANTIAL COMPLETION\nRiverside may issue a certificate of substantial completion when the work is sufficiently complete for its intended use, subject to a punch list. The certificate does not waive latent defects, unresolved payment claims, or warranty rights.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 40 OF 50"
+      },
+      "41": {
+        "sectionTitle": "PUNCH LIST",
+        "content": "PUNCH LIST\nThe April 2025 punch list contains 214 items, including door hardware, paint touch-up, life-safety labels, facade sealant, and apartment finish corrections. Harbor closed 163 items by May 12 and disputed 18 as owner changes.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 41 OF 50"
+      },
+      "42": {
+        "sectionTitle": "WARRANTY OBLIGATIONS",
+        "content": "WARRANTY OBLIGATIONS\nHarbor warrants construction in accordance with the contract and must correct covered defects reported during the warranty period. Manufacturer warranties for equipment must be assigned to Riverside at closeout.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 42 OF 50"
+      },
+      "43": {
+        "sectionTitle": "ARTICLE 19 - GOVERNING LAW",
+        "content": "ARTICLE 19 - GOVERNING LAW\nThe agreement is governed by the laws of the State of New York, without regard to conflict-of-law principles. The parties consent to courts located in New York County for permitted judicial proceedings.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 43 OF 50"
+      },
+      "44": {
+        "sectionTitle": "DISPUTE RESOLUTION",
+        "content": "DISPUTE RESOLUTION\nThe parties must first meet through executive representatives, then participate in mediation before filing a covered claim in court. Emergency injunctive relief and lien remedies are preserved where the agreement permits.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 44 OF 50"
+      },
+      "45": {
+        "sectionTitle": "MEDIATION POSITION",
+        "content": "MEDIATION POSITION\nRiverside seeks a completion plan, credit for defective work, and allocation of delay costs. Harbor seeks payment of certified change work, recognition of owner-caused delay, and release of withheld retainage subject to agreed security.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 45 OF 50"
+      },
+      "46": {
+        "sectionTitle": "EXPERT REPORT SUMMARY",
+        "content": "EXPERT REPORT SUMMARY\nThe scheduling expert finds that Harbor failed to maintain a reliable contemporaneous schedule after September 2024. The cost expert can verify direct costs but cannot substantiate the full acceleration claim because daily labor records are incomplete.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 46 OF 50"
+      },
+      "47": {
+        "sectionTitle": "EVIDENCE INDEX",
+        "content": "EVIDENCE INDEX\nKey evidence includes the Master Construction Agreement, baseline schedule, meeting minutes, inspection reports, payment applications 09 through 12, Change Order 04, insurance certificates, photographs, expert reports, and correspondence exchanged between November 2024 and May 2025.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 47 OF 50"
+      },
+      "48": {
+        "sectionTitle": "ARTICLE 22 - TERMINATION",
+        "content": "ARTICLE 22 - TERMINATION\nRiverside may terminate for uncured material breach after written notice and expiration of the applicable cure period. Immediate termination is permitted for insolvency, abandonment, repeated safety violations, or failure to maintain required insurance, subject to the agreement.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 48 OF 50"
+      },
+      "49": {
+        "sectionTitle": "REMEDIES AND RESERVATIONS",
+        "content": "REMEDIES AND RESERVATIONS\nThe parties reserve all claims, defenses, offsets, lien rights, warranty rights, and remedies available under the agreement and applicable law. No summary in this record constitutes a final legal conclusion or admission by either party.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 49 OF 50"
+      },
+      "50": {
+        "sectionTitle": "COUNSEL REVIEW CHECKLIST",
+        "content": "COUNSEL REVIEW CHECKLIST\nConfirm notice dates and contractual deadlines. Reconcile the critical-path analysis with daily reports. Obtain executed change-order signatures. Verify insurance endorsements and lien waivers. Evaluate cure compliance, termination prerequisites, and New York governing-law implications before advising on next steps.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 50 OF 50"
+      }
+    },
+    "document-1793519673788-a87y0e": {
+      "1": {
+        "sectionTitle": "Riverside Development Dispute",
+        "content": "Riverside Development Dispute\nMaster Agreement\nThe parties agree that written notice of a material delay must be delivered within ten business days. The notice must describe the cause, expected duration, and mitigation steps.\nTest fixture for LegalMind PDF upload and indexing validation."
+      }
+    },
+    "document-1793519692982-3ikz4e": {
+      "1": {
+        "sectionTitle": "CASE COVER AND PARTIES",
+        "content": "CASE COVER AND PARTIES\nRiverside Development LLC v. Harbor Construction Partners, Inc. Confidential case record prepared for counsel review. The dispute concerns a mixed-use redevelopment project at 114 Riverside Avenue, New York. Riverside is the owner and Harbor is the general contractor.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 1 OF 50"
+      },
+      "2": {
+        "sectionTitle": "EXECUTIVE SUMMARY",
+        "content": "EXECUTIVE SUMMARY\nRiverside alleges that Harbor missed contractual milestones, submitted unsupported payment applications, and failed to correct defective waterproofing. Harbor denies material breach and contends that owner-directed design changes, permit delays, and late site access excused the schedule impact.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 2 OF 50"
+      },
+      "3": {
+        "sectionTitle": "PARTIES AND REPRESENTATIVES",
+        "content": "PARTIES AND REPRESENTATIVES\nPlaintiff/Owner: Riverside Development LLC, represented by Northstar Legal Group. Defendant/Contractor: Harbor Construction Partners, Inc., represented by Vance & Cole LLP. Architect: Meridian Studio Architects. Lender: Hudson Commercial Bank.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 3 OF 50"
+      },
+      "4": {
+        "sectionTitle": "PROJECT DESCRIPTION",
+        "content": "PROJECT DESCRIPTION\nThe project is a twelve-story mixed-use building with 184 residential units, ground-floor retail, two levels of below-grade parking, and a public riverwalk. The contract price is $48,600,000, subject to approved change orders.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 4 OF 50"
+      },
+      "5": {
+        "sectionTitle": "CONTRACT FORMATION",
+        "content": "CONTRACT FORMATION\nThe parties executed the Master Construction Agreement on January 18, 2024. The agreement incorporates the plans, specifications, general conditions, schedule of values, and the dispute-resolution exhibit. The planned substantial-completion date was June 30, 2025.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 5 OF 50"
+      },
+      "6": {
+        "sectionTitle": "SCHEDULE BASELINE",
+        "content": "SCHEDULE BASELINE\nThe baseline schedule identifies excavation, foundation, structural frame, enclosure, mechanical rough-in, finishes, testing, and turnover as critical activities. Harbor was required to update the schedule monthly and identify activities that threatened substantial completion.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 6 OF 50"
+      },
+      "7": {
+        "sectionTitle": "ARTICLE 3 - NOTICE OF DELAY",
+        "content": "ARTICLE 3 - NOTICE OF DELAY\nA party discovering a material delay shall provide written notice within ten business days. The notice must identify the affected milestone, expected impact, and mitigation steps. Failure to provide timely notice may limit recovery for delay damages.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 7 OF 50"
+      },
+      "8": {
+        "sectionTitle": "SITE ACCESS AND CONDITIONS",
+        "content": "SITE ACCESS AND CONDITIONS\nRiverside delivered the initial site on February 1, 2024. Harbor reported undocumented utility lines on February 12. The parties agreed that investigation would proceed without stopping unaffected work, while responsibility for verified owner-caused conditions remained reserved.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 8 OF 50"
+      },
+      "9": {
+        "sectionTitle": "PERMIT HISTORY",
+        "content": "PERMIT HISTORY\nThe foundation permit issued February 26, 2024. The Department of Buildings issued comments on the facade package in May. Meridian submitted a revised package on June 4, and the facade permit was issued July 9, 2024.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 9 OF 50"
+      },
+      "10": {
+        "sectionTitle": "DESIGN DOCUMENTS",
+        "content": "DESIGN DOCUMENTS\nThe issued-for-construction drawings dated January 10, 2024 govern unless modified by a signed change order or written architect instruction. Harbor was required to review dimensions and promptly report inconsistencies discovered during coordination.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 10 OF 50"
+      },
+      "11": {
+        "sectionTitle": "DEFAULT NOTICE",
+        "content": "DEFAULT NOTICE\nOn November 14, 2024, Riverside issued a preliminary notice identifying schedule slippage, incomplete submittals, and deficient waterproofing. The notice requested a recovery schedule within seven days and reserved all contractual remedies.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 11 OF 50"
+      },
+      "12": {
+        "sectionTitle": "ARTICLE 5 - CURE PERIOD",
+        "content": "ARTICLE 5 - CURE PERIOD\nThe receiving party has thirty calendar days after valid notice to cure a material breach, unless an emergency threatens immediate and irreparable harm. A cure plan must state responsible personnel, corrective work, and the date by which compliance will be achieved.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 12 OF 50"
+      },
+      "13": {
+        "sectionTitle": "HARBOR RESPONSE",
+        "content": "HARBOR RESPONSE\nHarbor responded on November 21, 2024, disputing the characterization of delay and attributing six weeks to owner revisions. Harbor proposed extended shifts, additional waterproofing crews, and weekly executive meetings.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 13 OF 50"
+      },
+      "14": {
+        "sectionTitle": "RECOVERY SCHEDULE",
+        "content": "RECOVERY SCHEDULE\nThe recovery schedule moved interior framing to parallel work fronts and added Saturday shifts. The schedule forecast substantial completion on August 15, 2025, subject to timely release of the elevator shop drawings and final facade approvals.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 14 OF 50"
+      },
+      "15": {
+        "sectionTitle": "MEETING MINUTES",
+        "content": "MEETING MINUTES\nThe December 3 coordination meeting recorded open issues for facade anchors, elevator dimensions, fire-stopping details, and roof drains. Meridian directed Harbor to submit a consolidated request for information log within five business days.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 15 OF 50"
+      },
+      "16": {
+        "sectionTitle": "ARTICLE 16 - INSURANCE",
+        "content": "ARTICLE 16 - INSURANCE\nHarbor shall maintain commercial general liability, workers compensation, automobile liability, and builder risk coverage. Certificates must name Riverside and the lender as additional insureds where required, and cancellation notices must be provided before coverage terminates.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 16 OF 50"
+      },
+      "17": {
+        "sectionTitle": "INSURANCE CERTIFICATES",
+        "content": "INSURANCE CERTIFICATES\nThe certificate dated January 30, 2024 listed $2,000,000 per occurrence general liability and $5,000,000 umbrella coverage. Riverside requested an endorsement showing completed-operations coverage; Harbor supplied the endorsement on March 6.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 17 OF 50"
+      },
+      "18": {
+        "sectionTitle": "ARTICLE 8 - PAYMENT OBLIGATIONS",
+        "content": "ARTICLE 8 - PAYMENT OBLIGATIONS\nRiverside must pay an approved payment application within twenty-five days after receipt of the architect certification. Harbor must support each application with conditional waivers, updated schedule information, stored-material evidence, and a current schedule of values.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 18 OF 50"
+      },
+      "19": {
+        "sectionTitle": "PAYMENT APPLICATION 09",
+        "content": "PAYMENT APPLICATION 09\nApplication 09 requested $3,240,000 gross, less retainage and prior payments. Meridian certified $2,610,000 after excluding unsupported stored materials and work not conforming to the inspection log. Riverside paid the certified amount.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 19 OF 50"
+      },
+      "20": {
+        "sectionTitle": "PAYMENT DISPUTE",
+        "content": "PAYMENT DISPUTE\nHarbor claimed the withheld amount was an improper setoff. Riverside responded that the contract permits withholding for defective work and incomplete substantiation, provided the owner gives written reasons and releases undisputed amounts.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 20 OF 50"
+      },
+      "21": {
+        "sectionTitle": "WATERPROOFING OBSERVATIONS",
+        "content": "WATERPROOFING OBSERVATIONS\nInspection reports dated October 8 and October 22 identified membrane holidays, inadequate laps, and unsealed penetrations at the parking garage north wall. Harbor was directed to expose representative areas and submit a repair method.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 21 OF 50"
+      },
+      "22": {
+        "sectionTitle": "REMEDIATION PLAN",
+        "content": "REMEDIATION PLAN\nHarbor proposed removing affected membrane, drying the substrate, applying primer, installing replacement membrane, and performing a flood test. Meridian approved the method subject to photographic records and a twenty-four-hour test period.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 22 OF 50"
+      },
+      "23": {
+        "sectionTitle": "QUALITY CONTROL",
+        "content": "QUALITY CONTROL\nThe quality-control log records remedial work at grid lines N-4 through N-9. A December 19 test passed at the north wall, but a January 7 retest failed at one penetration. Harbor reopened the area and completed a second repair.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 23 OF 50"
+      },
+      "24": {
+        "sectionTitle": "ARTICLE 10 - CHANGE ORDERS",
+        "content": "ARTICLE 10 - CHANGE ORDERS\nNo change in contract sum or time is enforceable as a change order unless documented in a written instrument signed by Riverside and Harbor. Emergency direction may proceed to protect life or property, but pricing and time must be submitted promptly.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 24 OF 50"
+      },
+      "25": {
+        "sectionTitle": "CHANGE ORDER 04",
+        "content": "CHANGE ORDER 04\nChange Order 04 adds $186,400 for revised retail storefront mullions and grants fourteen calendar days. It was signed by both parties on August 16, 2024, and incorporated into the next schedule update.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 25 OF 50"
+      },
+      "26": {
+        "sectionTitle": "CHANGE DIRECTIVES",
+        "content": "CHANGE DIRECTIVES\nThree architect directives addressed fire-rated shaft walls and corridor ceiling access panels. Harbor priced the work but proceeded before signatures. Riverside maintains that only the signed directive for shaft walls qualifies for additional compensation.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 26 OF 50"
+      },
+      "27": {
+        "sectionTitle": "OWNER-CAUSED DELAYS",
+        "content": "OWNER-CAUSED DELAYS\nThe record supports a nine-day delay associated with late selection of lobby stone. Harbor did not segregate that delay from concurrent facade and procurement delays, making the claimed forty-two-day extension difficult to verify.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 27 OF 50"
+      },
+      "28": {
+        "sectionTitle": "CONTRACTOR-CAUSED DELAYS",
+        "content": "CONTRACTOR-CAUSED DELAYS\nThe critical-path report identifies late elevator submittals, insufficient framing labor, and repeated waterproofing repairs as contractor-responsible impacts. Harbor disputes causation and points to late design clarifications.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 28 OF 50"
+      },
+      "29": {
+        "sectionTitle": "CONCURRENT DELAY ANALYSIS",
+        "content": "CONCURRENT DELAY ANALYSIS\nThe schedule expert concludes that owner and contractor delays overlapped from October 2 through October 11, 2024. The report recommends no compensable delay damages for that period but allows evaluation of non-overlapping impacts.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 29 OF 50"
+      },
+      "30": {
+        "sectionTitle": "DAMAGES OVERVIEW",
+        "content": "DAMAGES OVERVIEW\nRiverside claims liquidated damages, consultant fees, temporary security, and carrying costs. Harbor claims unpaid change work, extended general conditions, and acceleration costs. Both parties reserve rights concerning consequential damages under the contract limitation.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 30 OF 50"
+      },
+      "31": {
+        "sectionTitle": "ARTICLE 13 - INDEMNIFICATION",
+        "content": "ARTICLE 13 - INDEMNIFICATION\nHarbor shall defend and indemnify Riverside from claims arising out of Harbor operations to the extent caused by Harbor or its subcontractors. The obligation does not require indemnity for Riverside's sole negligence or intentional misconduct.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 31 OF 50"
+      },
+      "32": {
+        "sectionTitle": "THIRD-PARTY CLAIM",
+        "content": "THIRD-PARTY CLAIM\nA neighboring owner alleged vibration damage during excavation. Harbor notified its carrier and retained a geotechnical consultant. The claim was resolved without admission for $92,000, with the parties disputing allocation of the settlement and defense costs.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 32 OF 50"
+      },
+      "33": {
+        "sectionTitle": "SUBCONTRACTOR ISSUES",
+        "content": "SUBCONTRACTOR ISSUES\nMetro Waterproofing submitted a notice of nonpayment and threatened demobilization. Harbor provided a payment ledger showing disputed backcharges. Riverside requested proof of payment and conditional lien waivers before releasing the next progress payment.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 33 OF 50"
+      },
+      "34": {
+        "sectionTitle": "LIENS AND WAIVERS",
+        "content": "LIENS AND WAIVERS\nA preliminary lien notice was received from Metro Waterproofing on February 2, 2025. Harbor obtained a release through January 31 but had not secured a final release for February work when Application 12 was submitted.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 34 OF 50"
+      },
+      "35": {
+        "sectionTitle": "SAFETY RECORD",
+        "content": "SAFETY RECORD\nThe project recorded two OSHA-reportable incidents involving subcontractor employees. The safety consultant found no willful violation but required a revised fall-protection plan, daily toolbox talks, and documented corrective-action reviews.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 35 OF 50"
+      },
+      "36": {
+        "sectionTitle": "ENVIRONMENTAL CONDITIONS",
+        "content": "ENVIRONMENTAL CONDITIONS\nTesting identified petroleum-impacted soil near the former loading area. The environmental consultant recommended segregated excavation and disposal at a licensed facility. The parties treated the work as a potential allowance item pending laboratory confirmation.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 36 OF 50"
+      },
+      "37": {
+        "sectionTitle": "ARTICLE 16 - INSURANCE CLAIM",
+        "content": "ARTICLE 16 - INSURANCE CLAIM\nThe builder-risk policy covers direct physical loss caused by a covered peril, subject to exclusions and deductible. Riverside notified the carrier after a storm damaged temporary roof protection. The carrier accepted coverage for emergency drying but reserved rights on consequential delay.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 37 OF 50"
+      },
+      "38": {
+        "sectionTitle": "STORM EVENT",
+        "content": "STORM EVENT\nA severe storm on March 18, 2025 caused water intrusion at the east stair core. Harbor installed temporary protection within twenty-four hours. Meridian's inspection found damage to gypsum board and insulation, with no structural damage.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 38 OF 50"
+      },
+      "39": {
+        "sectionTitle": "TESTING AND COMMISSIONING",
+        "content": "TESTING AND COMMISSIONING\nThe commissioning plan requires functional testing for HVAC, life safety, elevators, domestic water, and emergency power. Each system must have a signed test report, deficiency list, and closeout date before substantial completion.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 39 OF 50"
+      },
+      "40": {
+        "sectionTitle": "SUBSTANTIAL COMPLETION",
+        "content": "SUBSTANTIAL COMPLETION\nRiverside may issue a certificate of substantial completion when the work is sufficiently complete for its intended use, subject to a punch list. The certificate does not waive latent defects, unresolved payment claims, or warranty rights.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 40 OF 50"
+      },
+      "41": {
+        "sectionTitle": "PUNCH LIST",
+        "content": "PUNCH LIST\nThe April 2025 punch list contains 214 items, including door hardware, paint touch-up, life-safety labels, facade sealant, and apartment finish corrections. Harbor closed 163 items by May 12 and disputed 18 as owner changes.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 41 OF 50"
+      },
+      "42": {
+        "sectionTitle": "WARRANTY OBLIGATIONS",
+        "content": "WARRANTY OBLIGATIONS\nHarbor warrants construction in accordance with the contract and must correct covered defects reported during the warranty period. Manufacturer warranties for equipment must be assigned to Riverside at closeout.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 42 OF 50"
+      },
+      "43": {
+        "sectionTitle": "ARTICLE 19 - GOVERNING LAW",
+        "content": "ARTICLE 19 - GOVERNING LAW\nThe agreement is governed by the laws of the State of New York, without regard to conflict-of-law principles. The parties consent to courts located in New York County for permitted judicial proceedings.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 43 OF 50"
+      },
+      "44": {
+        "sectionTitle": "DISPUTE RESOLUTION",
+        "content": "DISPUTE RESOLUTION\nThe parties must first meet through executive representatives, then participate in mediation before filing a covered claim in court. Emergency injunctive relief and lien remedies are preserved where the agreement permits.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 44 OF 50"
+      },
+      "45": {
+        "sectionTitle": "MEDIATION POSITION",
+        "content": "MEDIATION POSITION\nRiverside seeks a completion plan, credit for defective work, and allocation of delay costs. Harbor seeks payment of certified change work, recognition of owner-caused delay, and release of withheld retainage subject to agreed security.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 45 OF 50"
+      },
+      "46": {
+        "sectionTitle": "EXPERT REPORT SUMMARY",
+        "content": "EXPERT REPORT SUMMARY\nThe scheduling expert finds that Harbor failed to maintain a reliable contemporaneous schedule after September 2024. The cost expert can verify direct costs but cannot substantiate the full acceleration claim because daily labor records are incomplete.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 46 OF 50"
+      },
+      "47": {
+        "sectionTitle": "EVIDENCE INDEX",
+        "content": "EVIDENCE INDEX\nKey evidence includes the Master Construction Agreement, baseline schedule, meeting minutes, inspection reports, payment applications 09 through 12, Change Order 04, insurance certificates, photographs, expert reports, and correspondence exchanged between November 2024 and May 2025.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 47 OF 50"
+      },
+      "48": {
+        "sectionTitle": "ARTICLE 22 - TERMINATION",
+        "content": "ARTICLE 22 - TERMINATION\nRiverside may terminate for uncured material breach after written notice and expiration of the applicable cure period. Immediate termination is permitted for insolvency, abandonment, repeated safety violations, or failure to maintain required insurance, subject to the agreement.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 48 OF 50"
+      },
+      "49": {
+        "sectionTitle": "REMEDIES AND RESERVATIONS",
+        "content": "REMEDIES AND RESERVATIONS\nThe parties reserve all claims, defenses, offsets, lien rights, warranty rights, and remedies available under the agreement and applicable law. No summary in this record constitutes a final legal conclusion or admission by either party.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 49 OF 50"
+      },
+      "50": {
+        "sectionTitle": "COUNSEL REVIEW CHECKLIST",
+        "content": "COUNSEL REVIEW CHECKLIST\nConfirm notice dates and contractual deadlines. Reconcile the critical-path analysis with daily reports. Obtain executed change-order signatures. Verify insurance endorsements and lien waivers. Evaluate cure compliance, termination prerequisites, and New York governing-law implications before advising on next steps.\nRIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 50 OF 50"
+      }
     }
   },
   "jobs": [
@@ -438,10 +1093,9 @@
       "id": "job-document-3",
       "documentId": "document-3",
       "version": 1,
-      "state": "failed",
-      "attemptCount": 1,
-      "errorCode": "EXTRACTION_UNSUPPORTED_TABLE",
-      "updatedAt": "2025-02-01T09:30:00.000Z"
+      "state": "ready",
+      "attemptCount": 2,
+      "updatedAt": "2026-11-01T03:23:13.490Z"
     },
     {
       "id": "job-document-1793471089144-trlogv",
@@ -468,53 +1122,1490 @@
       "updatedAt": "2026-10-31T18:28:17.640Z"
     },
     {
-      "id": "job-document-1793501162771-0eymrs",
-      "documentId": "document-1793501162771-0eymrs",
+      "id": "job-document-1793501764506-071u9z",
+      "documentId": "document-1793501764506-071u9z",
       "version": 1,
       "state": "ready",
       "attemptCount": 0,
-      "updatedAt": "2026-11-01T02:46:03.293Z"
+      "updatedAt": "2026-11-01T02:56:06.986Z"
+    },
+    {
+      "id": "job-document-1793502892967-f8nwu6",
+      "documentId": "document-1793502892967-f8nwu6",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T03:14:55.429Z"
+    },
+    {
+      "id": "job-document-1793503101613-tpzhaa",
+      "documentId": "document-1793503101613-tpzhaa",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T03:18:24.083Z"
+    },
+    {
+      "id": "job-document-1793503251624-vzfe68",
+      "documentId": "document-1793503251624-vzfe68",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T03:20:54.107Z"
+    },
+    {
+      "id": "job-document-1793503569678-17h1ek",
+      "documentId": "document-1793503569678-17h1ek",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T03:26:10.285Z"
+    },
+    {
+      "id": "job-document-1793503703900-g73b3f",
+      "documentId": "document-1793503703900-g73b3f",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T03:28:26.937Z"
+    },
+    {
+      "id": "job-document-1793503738783-f2dwyz",
+      "documentId": "document-1793503738783-f2dwyz",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T03:28:59.443Z"
+    },
+    {
+      "id": "job-document-1793503792799-s1rsxb",
+      "documentId": "document-1793503792799-s1rsxb",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "job-document-1793519673788-a87y0e",
+      "documentId": "document-1793519673788-a87y0e",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T07:54:36.273Z"
+    },
+    {
+      "id": "job-document-1793519692982-3ikz4e",
+      "documentId": "document-1793519692982-3ikz4e",
+      "version": 1,
+      "state": "ready",
+      "attemptCount": 0,
+      "updatedAt": "2026-11-01T07:54:55.467Z"
     }
   ],
   "chunks": [
     {
-      "id": "document-4-v1-p54-0",
-      "documentId": "document-4",
-      "caseId": "case-3",
-      "ownerId": "lawyer-2",
-      "version": 1,
-      "physicalPage": 54,
-      "sectionTitle": "Closing Conditions",
-      "content": "The obligations to close are subject to satisfaction or waiver of the conditions listed in this article.",
+      "id": "document-1-v2-p40-0",
+      "documentId": "document-1",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 2,
+      "physicalPage": 40,
+      "sectionTitle": "Notice and Cure",
+      "content": "A party must provide written notice of a material delay and allow the contractual cure period before pursuing remedies.",
       "parserVersion": "text-pages-1",
       "chunkerVersion": "section-window-1",
-      "createdAt": "2026-11-01T02:45:03.829Z"
+      "createdAt": "2026-11-01T03:15:06.729Z"
     },
     {
-      "id": "document-4-v1-p55-0",
-      "documentId": "document-4",
-      "caseId": "case-3",
-      "ownerId": "lawyer-2",
-      "version": 1,
-      "physicalPage": 55,
-      "sectionTitle": "Governing Law",
-      "content": "This agreement and any dispute arising from it are governed by the laws of the State of Delaware, without regard to conflict-of-law principles.",
+      "id": "document-1-v2-p41-0",
+      "documentId": "document-1",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 2,
+      "physicalPage": 41,
+      "sectionTitle": "Notice and Cure",
+      "content": "Notice must identify the affected milestone, the anticipated impact, and the action requested from the receiving party.",
       "parserVersion": "text-pages-1",
       "chunkerVersion": "section-window-1",
-      "createdAt": "2026-11-01T02:45:03.829Z"
+      "createdAt": "2026-11-01T03:15:06.729Z"
     },
     {
-      "id": "document-4-v1-p56-0",
-      "documentId": "document-4",
-      "caseId": "case-3",
-      "ownerId": "lawyer-2",
-      "version": 1,
-      "physicalPage": 56,
-      "sectionTitle": "Entire Agreement",
-      "content": "This agreement constitutes the entire agreement between the parties concerning the transaction.",
+      "id": "document-1-v2-p42-0",
+      "documentId": "document-1",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 2,
+      "physicalPage": 42,
+      "sectionTitle": "Delay Notice Requirements",
+      "content": "The delayed party shall provide written notice within ten (10) business days after discovering the delay. The notice must describe the cause, expected duration, and mitigation steps.",
       "parserVersion": "text-pages-1",
       "chunkerVersion": "section-window-1",
-      "createdAt": "2026-11-01T02:45:03.829Z"
+      "createdAt": "2026-11-01T03:15:06.729Z"
+    },
+    {
+      "id": "document-1-v2-p43-0",
+      "documentId": "document-1",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 2,
+      "physicalPage": 43,
+      "sectionTitle": "Remedies",
+      "content": "Failure to provide timely notice may limit recovery to losses that could not reasonably have been avoided.",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:15:06.729Z"
+    },
+    {
+      "id": "document-3-v1-p17-0",
+      "documentId": "document-3",
+      "caseId": "case-2",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 17,
+      "sectionTitle": "Termination",
+      "content": "Either party may terminate for material breach after written notice and an opportunity to cure.",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:23:12.841Z"
+    },
+    {
+      "id": "document-3-v1-p18-0",
+      "documentId": "document-3",
+      "caseId": "case-2",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 18,
+      "sectionTitle": "Termination Notice",
+      "content": "A termination notice must be delivered in writing and specify the material breach relied upon by the terminating party.",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:23:12.841Z"
+    },
+    {
+      "id": "document-3-v1-p19-0",
+      "documentId": "document-3",
+      "caseId": "case-2",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 19,
+      "sectionTitle": "Post-Termination Obligations",
+      "content": "Accrued payment obligations and confidentiality duties survive termination of this agreement.",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:23:12.841Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p1-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 1,
+      "sectionTitle": "CASE COVER AND PARTIES",
+      "content": "CASE COVER AND PARTIES Riverside Development LLC v. Harbor Construction Partners, Inc. Confidential case record prepared for counsel review. The dispute concerns a mixed-use redevelopment project at 114 Riverside Avenue, New York. Riverside is the owner and Harbor is the general contractor. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 1 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p2-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 2,
+      "sectionTitle": "EXECUTIVE SUMMARY",
+      "content": "EXECUTIVE SUMMARY Riverside alleges that Harbor missed contractual milestones, submitted unsupported payment applications, and failed to correct defective waterproofing. Harbor denies material breach and contends that owner-directed design changes, permit delays, and late site access excused the schedule impact. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 2 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p3-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 3,
+      "sectionTitle": "PARTIES AND REPRESENTATIVES",
+      "content": "PARTIES AND REPRESENTATIVES Plaintiff/Owner: Riverside Development LLC, represented by Northstar Legal Group. Defendant/Contractor: Harbor Construction Partners, Inc., represented by Vance & Cole LLP. Architect: Meridian Studio Architects. Lender: Hudson Commercial Bank. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 3 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p4-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 4,
+      "sectionTitle": "PROJECT DESCRIPTION",
+      "content": "PROJECT DESCRIPTION The project is a twelve-story mixed-use building with 184 residential units, ground-floor retail, two levels of below-grade parking, and a public riverwalk. The contract price is $48,600,000, subject to approved change orders. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 4 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p5-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 5,
+      "sectionTitle": "CONTRACT FORMATION",
+      "content": "CONTRACT FORMATION The parties executed the Master Construction Agreement on January 18, 2024. The agreement incorporates the plans, specifications, general conditions, schedule of values, and the dispute-resolution exhibit. The planned substantial-completion date was June 30, 2025. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 5 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p6-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 6,
+      "sectionTitle": "SCHEDULE BASELINE",
+      "content": "SCHEDULE BASELINE The baseline schedule identifies excavation, foundation, structural frame, enclosure, mechanical rough-in, finishes, testing, and turnover as critical activities. Harbor was required to update the schedule monthly and identify activities that threatened substantial completion. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 6 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p7-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 7,
+      "sectionTitle": "ARTICLE 3 - NOTICE OF DELAY",
+      "content": "ARTICLE 3 - NOTICE OF DELAY A party discovering a material delay shall provide written notice within ten business days. The notice must identify the affected milestone, expected impact, and mitigation steps. Failure to provide timely notice may limit recovery for delay damages. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 7 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p8-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 8,
+      "sectionTitle": "SITE ACCESS AND CONDITIONS",
+      "content": "SITE ACCESS AND CONDITIONS Riverside delivered the initial site on February 1, 2024. Harbor reported undocumented utility lines on February 12. The parties agreed that investigation would proceed without stopping unaffected work, while responsibility for verified owner-caused conditions remained reserved. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 8 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p9-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 9,
+      "sectionTitle": "PERMIT HISTORY",
+      "content": "PERMIT HISTORY The foundation permit issued February 26, 2024. The Department of Buildings issued comments on the facade package in May. Meridian submitted a revised package on June 4, and the facade permit was issued July 9, 2024. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 9 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p10-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 10,
+      "sectionTitle": "DESIGN DOCUMENTS",
+      "content": "DESIGN DOCUMENTS The issued-for-construction drawings dated January 10, 2024 govern unless modified by a signed change order or written architect instruction. Harbor was required to review dimensions and promptly report inconsistencies discovered during coordination. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 10 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p11-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 11,
+      "sectionTitle": "DEFAULT NOTICE",
+      "content": "DEFAULT NOTICE On November 14, 2024, Riverside issued a preliminary notice identifying schedule slippage, incomplete submittals, and deficient waterproofing. The notice requested a recovery schedule within seven days and reserved all contractual remedies. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 11 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p12-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 12,
+      "sectionTitle": "ARTICLE 5 - CURE PERIOD",
+      "content": "ARTICLE 5 - CURE PERIOD The receiving party has thirty calendar days after valid notice to cure a material breach, unless an emergency threatens immediate and irreparable harm. A cure plan must state responsible personnel, corrective work, and the date by which compliance will be achieved. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 12 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p13-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 13,
+      "sectionTitle": "HARBOR RESPONSE",
+      "content": "HARBOR RESPONSE Harbor responded on November 21, 2024, disputing the characterization of delay and attributing six weeks to owner revisions. Harbor proposed extended shifts, additional waterproofing crews, and weekly executive meetings. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 13 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p14-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 14,
+      "sectionTitle": "RECOVERY SCHEDULE",
+      "content": "RECOVERY SCHEDULE The recovery schedule moved interior framing to parallel work fronts and added Saturday shifts. The schedule forecast substantial completion on August 15, 2025, subject to timely release of the elevator shop drawings and final facade approvals. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 14 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p15-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 15,
+      "sectionTitle": "MEETING MINUTES",
+      "content": "MEETING MINUTES The December 3 coordination meeting recorded open issues for facade anchors, elevator dimensions, fire-stopping details, and roof drains. Meridian directed Harbor to submit a consolidated request for information log within five business days. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 15 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p16-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 16,
+      "sectionTitle": "ARTICLE 16 - INSURANCE",
+      "content": "ARTICLE 16 - INSURANCE Harbor shall maintain commercial general liability, workers compensation, automobile liability, and builder risk coverage. Certificates must name Riverside and the lender as additional insureds where required, and cancellation notices must be provided before coverage terminates. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 16 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p17-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 17,
+      "sectionTitle": "INSURANCE CERTIFICATES",
+      "content": "INSURANCE CERTIFICATES The certificate dated January 30, 2024 listed $2,000,000 per occurrence general liability and $5,000,000 umbrella coverage. Riverside requested an endorsement showing completed-operations coverage; Harbor supplied the endorsement on March 6. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 17 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p18-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 18,
+      "sectionTitle": "ARTICLE 8 - PAYMENT OBLIGATIONS",
+      "content": "ARTICLE 8 - PAYMENT OBLIGATIONS Riverside must pay an approved payment application within twenty-five days after receipt of the architect certification. Harbor must support each application with conditional waivers, updated schedule information, stored-material evidence, and a current schedule of values. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 18 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p19-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 19,
+      "sectionTitle": "PAYMENT APPLICATION 09",
+      "content": "PAYMENT APPLICATION 09 Application 09 requested $3,240,000 gross, less retainage and prior payments. Meridian certified $2,610,000 after excluding unsupported stored materials and work not conforming to the inspection log. Riverside paid the certified amount. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 19 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p20-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 20,
+      "sectionTitle": "PAYMENT DISPUTE",
+      "content": "PAYMENT DISPUTE Harbor claimed the withheld amount was an improper setoff. Riverside responded that the contract permits withholding for defective work and incomplete substantiation, provided the owner gives written reasons and releases undisputed amounts. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 20 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p21-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 21,
+      "sectionTitle": "WATERPROOFING OBSERVATIONS",
+      "content": "WATERPROOFING OBSERVATIONS Inspection reports dated October 8 and October 22 identified membrane holidays, inadequate laps, and unsealed penetrations at the parking garage north wall. Harbor was directed to expose representative areas and submit a repair method. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 21 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p22-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 22,
+      "sectionTitle": "REMEDIATION PLAN",
+      "content": "REMEDIATION PLAN Harbor proposed removing affected membrane, drying the substrate, applying primer, installing replacement membrane, and performing a flood test. Meridian approved the method subject to photographic records and a twenty-four-hour test period. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 22 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p23-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 23,
+      "sectionTitle": "QUALITY CONTROL",
+      "content": "QUALITY CONTROL The quality-control log records remedial work at grid lines N-4 through N-9. A December 19 test passed at the north wall, but a January 7 retest failed at one penetration. Harbor reopened the area and completed a second repair. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 23 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p24-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 24,
+      "sectionTitle": "ARTICLE 10 - CHANGE ORDERS",
+      "content": "ARTICLE 10 - CHANGE ORDERS No change in contract sum or time is enforceable as a change order unless documented in a written instrument signed by Riverside and Harbor. Emergency direction may proceed to protect life or property, but pricing and time must be submitted promptly. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 24 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p25-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 25,
+      "sectionTitle": "CHANGE ORDER 04",
+      "content": "CHANGE ORDER 04 Change Order 04 adds $186,400 for revised retail storefront mullions and grants fourteen calendar days. It was signed by both parties on August 16, 2024, and incorporated into the next schedule update. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 25 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p26-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 26,
+      "sectionTitle": "CHANGE DIRECTIVES",
+      "content": "CHANGE DIRECTIVES Three architect directives addressed fire-rated shaft walls and corridor ceiling access panels. Harbor priced the work but proceeded before signatures. Riverside maintains that only the signed directive for shaft walls qualifies for additional compensation. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 26 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p27-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 27,
+      "sectionTitle": "OWNER-CAUSED DELAYS",
+      "content": "OWNER-CAUSED DELAYS The record supports a nine-day delay associated with late selection of lobby stone. Harbor did not segregate that delay from concurrent facade and procurement delays, making the claimed forty-two-day extension difficult to verify. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 27 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p28-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 28,
+      "sectionTitle": "CONTRACTOR-CAUSED DELAYS",
+      "content": "CONTRACTOR-CAUSED DELAYS The critical-path report identifies late elevator submittals, insufficient framing labor, and repeated waterproofing repairs as contractor-responsible impacts. Harbor disputes causation and points to late design clarifications. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 28 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p29-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 29,
+      "sectionTitle": "CONCURRENT DELAY ANALYSIS",
+      "content": "CONCURRENT DELAY ANALYSIS The schedule expert concludes that owner and contractor delays overlapped from October 2 through October 11, 2024. The report recommends no compensable delay damages for that period but allows evaluation of non-overlapping impacts. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 29 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p30-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 30,
+      "sectionTitle": "DAMAGES OVERVIEW",
+      "content": "DAMAGES OVERVIEW Riverside claims liquidated damages, consultant fees, temporary security, and carrying costs. Harbor claims unpaid change work, extended general conditions, and acceleration costs. Both parties reserve rights concerning consequential damages under the contract limitation. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 30 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p31-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 31,
+      "sectionTitle": "ARTICLE 13 - INDEMNIFICATION",
+      "content": "ARTICLE 13 - INDEMNIFICATION Harbor shall defend and indemnify Riverside from claims arising out of Harbor operations to the extent caused by Harbor or its subcontractors. The obligation does not require indemnity for Riverside's sole negligence or intentional misconduct. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 31 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p32-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 32,
+      "sectionTitle": "THIRD-PARTY CLAIM",
+      "content": "THIRD-PARTY CLAIM A neighboring owner alleged vibration damage during excavation. Harbor notified its carrier and retained a geotechnical consultant. The claim was resolved without admission for $92,000, with the parties disputing allocation of the settlement and defense costs. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 32 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p33-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 33,
+      "sectionTitle": "SUBCONTRACTOR ISSUES",
+      "content": "SUBCONTRACTOR ISSUES Metro Waterproofing submitted a notice of nonpayment and threatened demobilization. Harbor provided a payment ledger showing disputed backcharges. Riverside requested proof of payment and conditional lien waivers before releasing the next progress payment. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 33 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p34-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 34,
+      "sectionTitle": "LIENS AND WAIVERS",
+      "content": "LIENS AND WAIVERS A preliminary lien notice was received from Metro Waterproofing on February 2, 2025. Harbor obtained a release through January 31 but had not secured a final release for February work when Application 12 was submitted. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 34 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p35-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 35,
+      "sectionTitle": "SAFETY RECORD",
+      "content": "SAFETY RECORD The project recorded two OSHA-reportable incidents involving subcontractor employees. The safety consultant found no willful violation but required a revised fall-protection plan, daily toolbox talks, and documented corrective-action reviews. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 35 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p36-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 36,
+      "sectionTitle": "ENVIRONMENTAL CONDITIONS",
+      "content": "ENVIRONMENTAL CONDITIONS Testing identified petroleum-impacted soil near the former loading area. The environmental consultant recommended segregated excavation and disposal at a licensed facility. The parties treated the work as a potential allowance item pending laboratory confirmation. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 36 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p37-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 37,
+      "sectionTitle": "ARTICLE 16 - INSURANCE CLAIM",
+      "content": "ARTICLE 16 - INSURANCE CLAIM The builder-risk policy covers direct physical loss caused by a covered peril, subject to exclusions and deductible. Riverside notified the carrier after a storm damaged temporary roof protection. The carrier accepted coverage for emergency drying but reserved rights on consequential delay. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 37 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p38-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 38,
+      "sectionTitle": "STORM EVENT",
+      "content": "STORM EVENT A severe storm on March 18, 2025 caused water intrusion at the east stair core. Harbor installed temporary protection within twenty-four hours. Meridian's inspection found damage to gypsum board and insulation, with no structural damage. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 38 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p39-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 39,
+      "sectionTitle": "TESTING AND COMMISSIONING",
+      "content": "TESTING AND COMMISSIONING The commissioning plan requires functional testing for HVAC, life safety, elevators, domestic water, and emergency power. Each system must have a signed test report, deficiency list, and closeout date before substantial completion. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 39 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.482Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p40-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 40,
+      "sectionTitle": "SUBSTANTIAL COMPLETION",
+      "content": "SUBSTANTIAL COMPLETION Riverside may issue a certificate of substantial completion when the work is sufficiently complete for its intended use, subject to a punch list. The certificate does not waive latent defects, unresolved payment claims, or warranty rights. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 40 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p41-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 41,
+      "sectionTitle": "PUNCH LIST",
+      "content": "PUNCH LIST The April 2025 punch list contains 214 items, including door hardware, paint touch-up, life-safety labels, facade sealant, and apartment finish corrections. Harbor closed 163 items by May 12 and disputed 18 as owner changes. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 41 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p42-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 42,
+      "sectionTitle": "WARRANTY OBLIGATIONS",
+      "content": "WARRANTY OBLIGATIONS Harbor warrants construction in accordance with the contract and must correct covered defects reported during the warranty period. Manufacturer warranties for equipment must be assigned to Riverside at closeout. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 42 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p43-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 43,
+      "sectionTitle": "ARTICLE 19 - GOVERNING LAW",
+      "content": "ARTICLE 19 - GOVERNING LAW The agreement is governed by the laws of the State of New York, without regard to conflict-of-law principles. The parties consent to courts located in New York County for permitted judicial proceedings. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 43 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p44-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 44,
+      "sectionTitle": "DISPUTE RESOLUTION",
+      "content": "DISPUTE RESOLUTION The parties must first meet through executive representatives, then participate in mediation before filing a covered claim in court. Emergency injunctive relief and lien remedies are preserved where the agreement permits. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 44 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p45-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 45,
+      "sectionTitle": "MEDIATION POSITION",
+      "content": "MEDIATION POSITION Riverside seeks a completion plan, credit for defective work, and allocation of delay costs. Harbor seeks payment of certified change work, recognition of owner-caused delay, and release of withheld retainage subject to agreed security. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 45 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p46-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 46,
+      "sectionTitle": "EXPERT REPORT SUMMARY",
+      "content": "EXPERT REPORT SUMMARY The scheduling expert finds that Harbor failed to maintain a reliable contemporaneous schedule after September 2024. The cost expert can verify direct costs but cannot substantiate the full acceleration claim because daily labor records are incomplete. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 46 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p47-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 47,
+      "sectionTitle": "EVIDENCE INDEX",
+      "content": "EVIDENCE INDEX Key evidence includes the Master Construction Agreement, baseline schedule, meeting minutes, inspection reports, payment applications 09 through 12, Change Order 04, insurance certificates, photographs, expert reports, and correspondence exchanged between November 2024 and May 2025. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 47 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p48-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 48,
+      "sectionTitle": "ARTICLE 22 - TERMINATION",
+      "content": "ARTICLE 22 - TERMINATION Riverside may terminate for uncured material breach after written notice and expiration of the applicable cure period. Immediate termination is permitted for insolvency, abandonment, repeated safety violations, or failure to maintain required insurance, subject to the agreement. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 48 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p49-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 49,
+      "sectionTitle": "REMEDIES AND RESERVATIONS",
+      "content": "REMEDIES AND RESERVATIONS The parties reserve all claims, defenses, offsets, lien rights, warranty rights, and remedies available under the agreement and applicable law. No summary in this record constitutes a final legal conclusion or admission by either party. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 49 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793503792799-s1rsxb-v1-p50-0",
+      "documentId": "document-1793503792799-s1rsxb",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 50,
+      "sectionTitle": "COUNSEL REVIEW CHECKLIST",
+      "content": "COUNSEL REVIEW CHECKLIST Confirm notice dates and contractual deadlines. Reconcile the critical-path analysis with daily reports. Obtain executed change-order signatures. Verify insurance endorsements and lien waivers. Evaluate cure compliance, termination prerequisites, and New York governing-law implications before advising on next steps. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 50 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T03:29:53.483Z"
+    },
+    {
+      "id": "document-1793519673788-a87y0e-v1-p1-0",
+      "documentId": "document-1793519673788-a87y0e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 1,
+      "sectionTitle": "Riverside Development Dispute",
+      "content": "Riverside Development Dispute Master Agreement The parties agree that written notice of a material delay must be delivered within ten business days. The notice must describe the cause, expected duration, and mitigation steps. Test fixture for LegalMind PDF upload and indexing validation.",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:35.563Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p1-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 1,
+      "sectionTitle": "CASE COVER AND PARTIES",
+      "content": "CASE COVER AND PARTIES Riverside Development LLC v. Harbor Construction Partners, Inc. Confidential case record prepared for counsel review. The dispute concerns a mixed-use redevelopment project at 114 Riverside Avenue, New York. Riverside is the owner and Harbor is the general contractor. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 1 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p2-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 2,
+      "sectionTitle": "EXECUTIVE SUMMARY",
+      "content": "EXECUTIVE SUMMARY Riverside alleges that Harbor missed contractual milestones, submitted unsupported payment applications, and failed to correct defective waterproofing. Harbor denies material breach and contends that owner-directed design changes, permit delays, and late site access excused the schedule impact. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 2 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p3-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 3,
+      "sectionTitle": "PARTIES AND REPRESENTATIVES",
+      "content": "PARTIES AND REPRESENTATIVES Plaintiff/Owner: Riverside Development LLC, represented by Northstar Legal Group. Defendant/Contractor: Harbor Construction Partners, Inc., represented by Vance & Cole LLP. Architect: Meridian Studio Architects. Lender: Hudson Commercial Bank. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 3 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p4-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 4,
+      "sectionTitle": "PROJECT DESCRIPTION",
+      "content": "PROJECT DESCRIPTION The project is a twelve-story mixed-use building with 184 residential units, ground-floor retail, two levels of below-grade parking, and a public riverwalk. The contract price is $48,600,000, subject to approved change orders. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 4 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p5-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 5,
+      "sectionTitle": "CONTRACT FORMATION",
+      "content": "CONTRACT FORMATION The parties executed the Master Construction Agreement on January 18, 2024. The agreement incorporates the plans, specifications, general conditions, schedule of values, and the dispute-resolution exhibit. The planned substantial-completion date was June 30, 2025. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 5 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p6-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 6,
+      "sectionTitle": "SCHEDULE BASELINE",
+      "content": "SCHEDULE BASELINE The baseline schedule identifies excavation, foundation, structural frame, enclosure, mechanical rough-in, finishes, testing, and turnover as critical activities. Harbor was required to update the schedule monthly and identify activities that threatened substantial completion. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 6 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p7-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 7,
+      "sectionTitle": "ARTICLE 3 - NOTICE OF DELAY",
+      "content": "ARTICLE 3 - NOTICE OF DELAY A party discovering a material delay shall provide written notice within ten business days. The notice must identify the affected milestone, expected impact, and mitigation steps. Failure to provide timely notice may limit recovery for delay damages. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 7 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p8-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 8,
+      "sectionTitle": "SITE ACCESS AND CONDITIONS",
+      "content": "SITE ACCESS AND CONDITIONS Riverside delivered the initial site on February 1, 2024. Harbor reported undocumented utility lines on February 12. The parties agreed that investigation would proceed without stopping unaffected work, while responsibility for verified owner-caused conditions remained reserved. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 8 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p9-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 9,
+      "sectionTitle": "PERMIT HISTORY",
+      "content": "PERMIT HISTORY The foundation permit issued February 26, 2024. The Department of Buildings issued comments on the facade package in May. Meridian submitted a revised package on June 4, and the facade permit was issued July 9, 2024. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 9 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p10-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 10,
+      "sectionTitle": "DESIGN DOCUMENTS",
+      "content": "DESIGN DOCUMENTS The issued-for-construction drawings dated January 10, 2024 govern unless modified by a signed change order or written architect instruction. Harbor was required to review dimensions and promptly report inconsistencies discovered during coordination. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 10 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p11-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 11,
+      "sectionTitle": "DEFAULT NOTICE",
+      "content": "DEFAULT NOTICE On November 14, 2024, Riverside issued a preliminary notice identifying schedule slippage, incomplete submittals, and deficient waterproofing. The notice requested a recovery schedule within seven days and reserved all contractual remedies. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 11 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p12-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 12,
+      "sectionTitle": "ARTICLE 5 - CURE PERIOD",
+      "content": "ARTICLE 5 - CURE PERIOD The receiving party has thirty calendar days after valid notice to cure a material breach, unless an emergency threatens immediate and irreparable harm. A cure plan must state responsible personnel, corrective work, and the date by which compliance will be achieved. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 12 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p13-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 13,
+      "sectionTitle": "HARBOR RESPONSE",
+      "content": "HARBOR RESPONSE Harbor responded on November 21, 2024, disputing the characterization of delay and attributing six weeks to owner revisions. Harbor proposed extended shifts, additional waterproofing crews, and weekly executive meetings. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 13 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p14-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 14,
+      "sectionTitle": "RECOVERY SCHEDULE",
+      "content": "RECOVERY SCHEDULE The recovery schedule moved interior framing to parallel work fronts and added Saturday shifts. The schedule forecast substantial completion on August 15, 2025, subject to timely release of the elevator shop drawings and final facade approvals. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 14 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p15-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 15,
+      "sectionTitle": "MEETING MINUTES",
+      "content": "MEETING MINUTES The December 3 coordination meeting recorded open issues for facade anchors, elevator dimensions, fire-stopping details, and roof drains. Meridian directed Harbor to submit a consolidated request for information log within five business days. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 15 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p16-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 16,
+      "sectionTitle": "ARTICLE 16 - INSURANCE",
+      "content": "ARTICLE 16 - INSURANCE Harbor shall maintain commercial general liability, workers compensation, automobile liability, and builder risk coverage. Certificates must name Riverside and the lender as additional insureds where required, and cancellation notices must be provided before coverage terminates. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 16 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p17-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 17,
+      "sectionTitle": "INSURANCE CERTIFICATES",
+      "content": "INSURANCE CERTIFICATES The certificate dated January 30, 2024 listed $2,000,000 per occurrence general liability and $5,000,000 umbrella coverage. Riverside requested an endorsement showing completed-operations coverage; Harbor supplied the endorsement on March 6. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 17 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p18-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 18,
+      "sectionTitle": "ARTICLE 8 - PAYMENT OBLIGATIONS",
+      "content": "ARTICLE 8 - PAYMENT OBLIGATIONS Riverside must pay an approved payment application within twenty-five days after receipt of the architect certification. Harbor must support each application with conditional waivers, updated schedule information, stored-material evidence, and a current schedule of values. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 18 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p19-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 19,
+      "sectionTitle": "PAYMENT APPLICATION 09",
+      "content": "PAYMENT APPLICATION 09 Application 09 requested $3,240,000 gross, less retainage and prior payments. Meridian certified $2,610,000 after excluding unsupported stored materials and work not conforming to the inspection log. Riverside paid the certified amount. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 19 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p20-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 20,
+      "sectionTitle": "PAYMENT DISPUTE",
+      "content": "PAYMENT DISPUTE Harbor claimed the withheld amount was an improper setoff. Riverside responded that the contract permits withholding for defective work and incomplete substantiation, provided the owner gives written reasons and releases undisputed amounts. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 20 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p21-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 21,
+      "sectionTitle": "WATERPROOFING OBSERVATIONS",
+      "content": "WATERPROOFING OBSERVATIONS Inspection reports dated October 8 and October 22 identified membrane holidays, inadequate laps, and unsealed penetrations at the parking garage north wall. Harbor was directed to expose representative areas and submit a repair method. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 21 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p22-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 22,
+      "sectionTitle": "REMEDIATION PLAN",
+      "content": "REMEDIATION PLAN Harbor proposed removing affected membrane, drying the substrate, applying primer, installing replacement membrane, and performing a flood test. Meridian approved the method subject to photographic records and a twenty-four-hour test period. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 22 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p23-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 23,
+      "sectionTitle": "QUALITY CONTROL",
+      "content": "QUALITY CONTROL The quality-control log records remedial work at grid lines N-4 through N-9. A December 19 test passed at the north wall, but a January 7 retest failed at one penetration. Harbor reopened the area and completed a second repair. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 23 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p24-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 24,
+      "sectionTitle": "ARTICLE 10 - CHANGE ORDERS",
+      "content": "ARTICLE 10 - CHANGE ORDERS No change in contract sum or time is enforceable as a change order unless documented in a written instrument signed by Riverside and Harbor. Emergency direction may proceed to protect life or property, but pricing and time must be submitted promptly. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 24 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p25-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 25,
+      "sectionTitle": "CHANGE ORDER 04",
+      "content": "CHANGE ORDER 04 Change Order 04 adds $186,400 for revised retail storefront mullions and grants fourteen calendar days. It was signed by both parties on August 16, 2024, and incorporated into the next schedule update. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 25 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p26-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 26,
+      "sectionTitle": "CHANGE DIRECTIVES",
+      "content": "CHANGE DIRECTIVES Three architect directives addressed fire-rated shaft walls and corridor ceiling access panels. Harbor priced the work but proceeded before signatures. Riverside maintains that only the signed directive for shaft walls qualifies for additional compensation. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 26 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p27-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 27,
+      "sectionTitle": "OWNER-CAUSED DELAYS",
+      "content": "OWNER-CAUSED DELAYS The record supports a nine-day delay associated with late selection of lobby stone. Harbor did not segregate that delay from concurrent facade and procurement delays, making the claimed forty-two-day extension difficult to verify. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 27 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p28-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 28,
+      "sectionTitle": "CONTRACTOR-CAUSED DELAYS",
+      "content": "CONTRACTOR-CAUSED DELAYS The critical-path report identifies late elevator submittals, insufficient framing labor, and repeated waterproofing repairs as contractor-responsible impacts. Harbor disputes causation and points to late design clarifications. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 28 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p29-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 29,
+      "sectionTitle": "CONCURRENT DELAY ANALYSIS",
+      "content": "CONCURRENT DELAY ANALYSIS The schedule expert concludes that owner and contractor delays overlapped from October 2 through October 11, 2024. The report recommends no compensable delay damages for that period but allows evaluation of non-overlapping impacts. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 29 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p30-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 30,
+      "sectionTitle": "DAMAGES OVERVIEW",
+      "content": "DAMAGES OVERVIEW Riverside claims liquidated damages, consultant fees, temporary security, and carrying costs. Harbor claims unpaid change work, extended general conditions, and acceleration costs. Both parties reserve rights concerning consequential damages under the contract limitation. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 30 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p31-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 31,
+      "sectionTitle": "ARTICLE 13 - INDEMNIFICATION",
+      "content": "ARTICLE 13 - INDEMNIFICATION Harbor shall defend and indemnify Riverside from claims arising out of Harbor operations to the extent caused by Harbor or its subcontractors. The obligation does not require indemnity for Riverside's sole negligence or intentional misconduct. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 31 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p32-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 32,
+      "sectionTitle": "THIRD-PARTY CLAIM",
+      "content": "THIRD-PARTY CLAIM A neighboring owner alleged vibration damage during excavation. Harbor notified its carrier and retained a geotechnical consultant. The claim was resolved without admission for $92,000, with the parties disputing allocation of the settlement and defense costs. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 32 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p33-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 33,
+      "sectionTitle": "SUBCONTRACTOR ISSUES",
+      "content": "SUBCONTRACTOR ISSUES Metro Waterproofing submitted a notice of nonpayment and threatened demobilization. Harbor provided a payment ledger showing disputed backcharges. Riverside requested proof of payment and conditional lien waivers before releasing the next progress payment. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 33 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p34-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 34,
+      "sectionTitle": "LIENS AND WAIVERS",
+      "content": "LIENS AND WAIVERS A preliminary lien notice was received from Metro Waterproofing on February 2, 2025. Harbor obtained a release through January 31 but had not secured a final release for February work when Application 12 was submitted. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 34 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p35-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 35,
+      "sectionTitle": "SAFETY RECORD",
+      "content": "SAFETY RECORD The project recorded two OSHA-reportable incidents involving subcontractor employees. The safety consultant found no willful violation but required a revised fall-protection plan, daily toolbox talks, and documented corrective-action reviews. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 35 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p36-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 36,
+      "sectionTitle": "ENVIRONMENTAL CONDITIONS",
+      "content": "ENVIRONMENTAL CONDITIONS Testing identified petroleum-impacted soil near the former loading area. The environmental consultant recommended segregated excavation and disposal at a licensed facility. The parties treated the work as a potential allowance item pending laboratory confirmation. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 36 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p37-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 37,
+      "sectionTitle": "ARTICLE 16 - INSURANCE CLAIM",
+      "content": "ARTICLE 16 - INSURANCE CLAIM The builder-risk policy covers direct physical loss caused by a covered peril, subject to exclusions and deductible. Riverside notified the carrier after a storm damaged temporary roof protection. The carrier accepted coverage for emergency drying but reserved rights on consequential delay. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 37 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p38-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 38,
+      "sectionTitle": "STORM EVENT",
+      "content": "STORM EVENT A severe storm on March 18, 2025 caused water intrusion at the east stair core. Harbor installed temporary protection within twenty-four hours. Meridian's inspection found damage to gypsum board and insulation, with no structural damage. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 38 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p39-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 39,
+      "sectionTitle": "TESTING AND COMMISSIONING",
+      "content": "TESTING AND COMMISSIONING The commissioning plan requires functional testing for HVAC, life safety, elevators, domestic water, and emergency power. Each system must have a signed test report, deficiency list, and closeout date before substantial completion. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 39 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p40-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 40,
+      "sectionTitle": "SUBSTANTIAL COMPLETION",
+      "content": "SUBSTANTIAL COMPLETION Riverside may issue a certificate of substantial completion when the work is sufficiently complete for its intended use, subject to a punch list. The certificate does not waive latent defects, unresolved payment claims, or warranty rights. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 40 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p41-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 41,
+      "sectionTitle": "PUNCH LIST",
+      "content": "PUNCH LIST The April 2025 punch list contains 214 items, including door hardware, paint touch-up, life-safety labels, facade sealant, and apartment finish corrections. Harbor closed 163 items by May 12 and disputed 18 as owner changes. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 41 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p42-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 42,
+      "sectionTitle": "WARRANTY OBLIGATIONS",
+      "content": "WARRANTY OBLIGATIONS Harbor warrants construction in accordance with the contract and must correct covered defects reported during the warranty period. Manufacturer warranties for equipment must be assigned to Riverside at closeout. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 42 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p43-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 43,
+      "sectionTitle": "ARTICLE 19 - GOVERNING LAW",
+      "content": "ARTICLE 19 - GOVERNING LAW The agreement is governed by the laws of the State of New York, without regard to conflict-of-law principles. The parties consent to courts located in New York County for permitted judicial proceedings. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 43 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p44-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 44,
+      "sectionTitle": "DISPUTE RESOLUTION",
+      "content": "DISPUTE RESOLUTION The parties must first meet through executive representatives, then participate in mediation before filing a covered claim in court. Emergency injunctive relief and lien remedies are preserved where the agreement permits. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 44 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p45-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 45,
+      "sectionTitle": "MEDIATION POSITION",
+      "content": "MEDIATION POSITION Riverside seeks a completion plan, credit for defective work, and allocation of delay costs. Harbor seeks payment of certified change work, recognition of owner-caused delay, and release of withheld retainage subject to agreed security. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 45 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p46-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 46,
+      "sectionTitle": "EXPERT REPORT SUMMARY",
+      "content": "EXPERT REPORT SUMMARY The scheduling expert finds that Harbor failed to maintain a reliable contemporaneous schedule after September 2024. The cost expert can verify direct costs but cannot substantiate the full acceleration claim because daily labor records are incomplete. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 46 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p47-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 47,
+      "sectionTitle": "EVIDENCE INDEX",
+      "content": "EVIDENCE INDEX Key evidence includes the Master Construction Agreement, baseline schedule, meeting minutes, inspection reports, payment applications 09 through 12, Change Order 04, insurance certificates, photographs, expert reports, and correspondence exchanged between November 2024 and May 2025. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 47 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p48-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 48,
+      "sectionTitle": "ARTICLE 22 - TERMINATION",
+      "content": "ARTICLE 22 - TERMINATION Riverside may terminate for uncured material breach after written notice and expiration of the applicable cure period. Immediate termination is permitted for insolvency, abandonment, repeated safety violations, or failure to maintain required insurance, subject to the agreement. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 48 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p49-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 49,
+      "sectionTitle": "REMEDIES AND RESERVATIONS",
+      "content": "REMEDIES AND RESERVATIONS The parties reserve all claims, defenses, offsets, lien rights, warranty rights, and remedies available under the agreement and applicable law. No summary in this record constitutes a final legal conclusion or admission by either party. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 49 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
+    },
+    {
+      "id": "document-1793519692982-3ikz4e-v1-p50-0",
+      "documentId": "document-1793519692982-3ikz4e",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "version": 1,
+      "physicalPage": 50,
+      "sectionTitle": "COUNSEL REVIEW CHECKLIST",
+      "content": "COUNSEL REVIEW CHECKLIST Confirm notice dates and contractual deadlines. Reconcile the critical-path analysis with daily reports. Obtain executed change-order signatures. Verify insurance endorsements and lien waivers. Evaluate cure compliance, termination prerequisites, and New York governing-law implications before advising on next steps. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 50 OF 50",
+      "parserVersion": "text-pages-1",
+      "chunkerVersion": "section-window-1",
+      "createdAt": "2026-11-01T07:54:54.848Z"
     }
   ]
 }

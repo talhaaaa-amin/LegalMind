@@ -33,6 +33,43 @@ function validateFile(file: { name?: unknown; size?: unknown; type?: unknown }) 
   return { name, type, size };
 }
 
+function pdfPageCount(payload: Buffer): number | undefined {
+  const matches = [...payload.toString('latin1').matchAll(/\/Type\s*\/Pages[\s\S]{0,10000}?\/Count\s+(\d+)/g)];
+  const count = matches.map((match) => Number(match[1])).find((value) => Number.isInteger(value) && value > 0);
+  return count;
+}
+
+function pdfPageContents(payload: Buffer): Record<string, { sectionTitle: string; content: string }> {
+  const source = payload.toString('latin1');
+  const objects = new Map<number, string>();
+  for (const match of source.matchAll(/(\d+)\s+0\s+obj\b([\s\S]*?)endobj/g)) {
+    objects.set(Number(match[1]), match[2]);
+  }
+
+  const pageObjects = [...objects.entries()]
+    .filter(([, value]) => /\/Type\s*\/Page\b/.test(value))
+    .sort(([left], [right]) => left - right);
+  const pages: Record<string, { sectionTitle: string; content: string }> = {};
+  for (const [pageIndex, [, pageObject]] of pageObjects.entries()) {
+    const contentsReference = pageObject.match(/\/Contents\s+(\d+)\s+0\s+R/);
+    const contentsObject = contentsReference ? objects.get(Number(contentsReference[1])) : undefined;
+    if (!contentsObject) continue;
+    const stream = contentsObject.match(/\bstream\r?\n([\s\S]*?)\r?\nendstream\b/)?.[1] ?? '';
+    const text = [...stream.matchAll(/\(((?:\\.|[^\\()])*)\)\s*Tj/g)]
+      .map((match) => match[1]
+        .replace(/\\([\\()])/g, '$1')
+        .replace(/\\n/g, '\n')
+        .trim())
+      .filter(Boolean)
+      .join('\n')
+      .trim();
+    if (!text) continue;
+    const [sectionTitle] = text.split('\n');
+    pages[String(pageIndex + 1)] = { sectionTitle, content: text };
+  }
+  return pages;
+}
+
 export async function listDocuments(repository: Repository, ownerId: string, caseId?: string) {
   if (caseId) await requireCaseOwner(repository, caseId, ownerId);
   return listByOwner(repository, ownerId, caseId);
@@ -52,15 +89,22 @@ export async function uploadDocument(
     ? Buffer.from(input.content.slice('base64:'.length), 'base64')
     : file.name;
   const stored = await savePrivateDocument(storageKey, payload);
+  const pageCount = Buffer.isBuffer(payload) ? pdfPageCount(payload) : undefined;
   const timestamp = new Date().toISOString();
   const document: CaseDocument = {
-    id, caseId, ownerId, originalName: file.name, pageCount: 15 + Math.floor(Math.random() * 31),
+    id, caseId, ownerId, originalName: file.name, pageCount: pageCount ?? 1,
     activeVersion: 1, status: 'queued', createdAt: timestamp, storageKey: stored.storageKey, hash: stored.hash,
   };
   const job: JobRecord = {
     id: `job-${id}`, documentId: id, version: 1, state: 'queued', attemptCount: 0, updatedAt: timestamp,
   };
-  return create(repository, document, job);
+  const result = await create(repository, document, job);
+  if (Buffer.isBuffer(payload)) {
+    const workspace = await repository.read();
+    workspace.pageContents[id] = pdfPageContents(payload);
+    await repository.write(workspace);
+  }
+  return result;
 }
 
 export async function getStatus(repository: Repository, ownerId: string, documentId: string) {
