@@ -342,39 +342,6 @@
   ],
   "responses": [
     {
-      "id": "response-1793519717929-g4f3g",
-      "caseId": "case-1",
-      "ownerId": "lawyer-1",
-      "question": "What notice period is required before termination?",
-      "retrievalConfigVersion": "rag-python-v1",
-      "createdAt": "2026-11-01T07:55:17.929Z",
-      "status": "answered",
-      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
-      "citations": [
-        {
-          "sourceId": "S1",
-          "documentId": "document-1793519692982-3ikz4e",
-          "documentName": "riverside-development-dispute-50-page-record.pdf",
-          "version": 1,
-          "chunkId": "document-1793519692982-3ikz4e-v1-p48-0",
-          "physicalPage": 48,
-          "excerpt": "ARTICLE 22 - TERMINATION Riverside may terminate for uncured material breach after written notice and expiration of the applicable cure period. Immediate termination is permitted for insolvency, abandonment, repeated safety violations, or failure to maintain required insurance, subject to the agreement. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 48 OF 50",
-          "isAvailable": true
-        },
-        {
-          "sourceId": "S2",
-          "documentId": "document-1793519692982-3ikz4e",
-          "documentName": "riverside-development-dispute-50-page-record.pdf",
-          "version": 1,
-          "chunkId": "document-1793519692982-3ikz4e-v1-p50-0",
-          "physicalPage": 50,
-          "excerpt": "COUNSEL REVIEW CHECKLIST Confirm notice dates and contractual deadlines. Reconcile the critical-path analysis with daily reports. Obtain executed change-order signatures. Verify insurance endorsements and lien waivers. Evaluate cure compliance, termination prerequisites, and New York governing-law implications before advising on next steps. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 50 OF 50",
-          "isAvailable": true
-        }
-      ],
-      "limitations": null
-    },
-    {
       "id": "response-1",
       "caseId": "case-1",
       "ownerId": "lawyer-1",
@@ -440,6 +407,39 @@
       ],
       "retrievalConfigVersion": "rag-2025-01",
       "createdAt": "2025-02-07T10:00:00.000Z"
+    },
+    {
+      "id": "response-1793519717929-g4f3g",
+      "caseId": "case-1",
+      "ownerId": "lawyer-1",
+      "question": "What notice period is required before termination?",
+      "retrievalConfigVersion": "rag-python-v1",
+      "createdAt": "2026-11-01T07:55:17.929Z",
+      "status": "answered",
+      "answer": "Based on the selected case documents, the relevant provision addresses this issue directly [S1].",
+      "citations": [
+        {
+          "sourceId": "S1",
+          "documentId": "document-1793519692982-3ikz4e",
+          "documentName": "riverside-development-dispute-50-page-record.pdf",
+          "version": 1,
+          "chunkId": "document-1793519692982-3ikz4e-v1-p48-0",
+          "physicalPage": 48,
+          "excerpt": "ARTICLE 22 - TERMINATION Riverside may terminate for uncured material breach after written notice and expiration of the applicable cure period. Immediate termination is permitted for insolvency, abandonment, repeated safety violations, or failure to maintain required insurance, subject to the agreement. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 48 OF 50",
+          "isAvailable": true
+        },
+        {
+          "sourceId": "S2",
+          "documentId": "document-1793519692982-3ikz4e",
+          "documentName": "riverside-development-dispute-50-page-record.pdf",
+          "version": 1,
+          "chunkId": "document-1793519692982-3ikz4e-v1-p50-0",
+          "physicalPage": 50,
+          "excerpt": "COUNSEL REVIEW CHECKLIST Confirm notice dates and contractual deadlines. Reconcile the critical-path analysis with daily reports. Obtain executed change-order signatures. Verify insurance endorsements and lien waivers. Evaluate cure compliance, termination prerequisites, and New York governing-law implications before advising on next steps. RIVERSIDE DEVELOPMENT DISPUTE | CONFIDENTIAL LEGAL WORK PRODUCT | PAGE 50 OF 50",
+          "isAvailable": true
+        }
+      ],
+      "limitations": null
     },
     {
       "id": "response-1793503123178-d6dyl",
